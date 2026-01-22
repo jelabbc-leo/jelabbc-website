@@ -1,7 +1,6 @@
 {
   "name": "JELA Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:1.0-8.0-bookworm",
-  "customizations": {
+    "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",  "customizations": {
     "vscode": {
       "extensions": [
         "ms-dotnettools.csharp",
