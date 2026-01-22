@@ -1,0 +1,26 @@
+{
+  "name": "JELA Dev Container",
+  "image": "mcr.microsoft.com/dotnet/sdk:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:1": {
+      "version": "8.0"
+    },
+    "ghcr.io/devcontainers/features/powershell:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-playwright.playwright"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "dotnet.defaultSolution": "JELA.sln"
+      }
+    }
+  },
+  "forwardPorts": [5000, 5001],
+  "remoteUser": "vscode"
+}
