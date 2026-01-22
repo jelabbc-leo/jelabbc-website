@@ -1,12 +1,6 @@
 {
   "name": "JELA Dev Container",
-  "image": "mcr.microsoft.com/dotnet/sdk:8.0",
-  "features": {
-    "ghcr.io/devcontainers/features/dotnet:1": {
-      "version": "8.0"
-    },
-    "ghcr.io/devcontainers/features/powershell:1": {}
-  },
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
   "customizations": {
     "vscode": {
       "extensions": [
