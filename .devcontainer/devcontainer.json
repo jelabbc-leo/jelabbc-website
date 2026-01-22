@@ -17,7 +17,7 @@
       ],
       "settings": {
         "editor.formatOnSave": true,
-        "dotnet.defaultSolution": "JELA.sln"
+        "dotnet.defaultSolution": "JelaWeb.sln"
       }
     }
   },
