@@ -1,0 +1,17 @@
+Imports System.Web.UI
+
+''' <summary>
+''' Helper para funcionalidades auxiliares de Calendario de Reservaciones
+''' </summary>
+Public Class CalendarioReservacionesHelper
+
+    ''' <summary>
+    ''' Muestra un mensaje al usuario mediante JavaScript
+    ''' </summary>
+    Public Shared Sub MostrarMensaje(page As Page, mensaje As String, tipo As String)
+        Dim script As String = $"if (typeof showToast !== 'undefined') {{ showToast('{tipo}', '{mensaje.Replace("'", "\'")}'); }}"
+
+        ScriptManager.RegisterStartupScript(page, page.GetType(), "showAlert", script, True)
+    End Sub
+
+End Class

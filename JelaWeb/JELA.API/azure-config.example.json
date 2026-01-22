@@ -1,0 +1,29 @@
+{
+  "ConnectionStrings:MySQL": "Server=jela.mysql.database.azure.com;Database=jela_qa;Uid=jlsg;Pwd=TU_PASSWORD;SslMode=Required",
+  
+  "Jwt:SecretKey": "TU_CLAVE_SECRETA_SUPER_SEGURA_DE_AL_MENOS_32_CARACTERES_2025!",
+  "Jwt:Issuer": "JELA.API",
+  "Jwt:Audience": "JelaWeb",
+  "Jwt:ExpirationMinutes": "60",
+  "Jwt:RefreshTokenExpirationDays": "7",
+  
+  "AzureDocumentIntelligence:Endpoint": "https://jelapdf.cognitiveservices.azure.com/formrecognizer/documentModels/prebuilt-document:analyze?api-version=2023-07-31",
+  "AzureDocumentIntelligence:ApiKey": "TU_API_KEY_DE_AZURE_DOCUMENT_INTELLIGENCE",
+  
+  "AllowedTables:AllowedPrefixes": [
+    "cat_",
+    "conf_",
+    "op_",
+    "log_",
+    "vw_"
+  ],
+  "AllowedTables:BlockedTables": [
+    "conf_refresh_tokens"
+  ],
+  
+  "RateLimiting:PermitLimit": "100",
+  "RateLimiting:WindowMinutes": "1",
+  
+  "ASPNETCORE_ENVIRONMENT": "Production",
+  "ASPNETCORE_URLS": "http://+:80"
+}

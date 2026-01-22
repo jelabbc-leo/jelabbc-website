@@ -1,0 +1,238 @@
+/* ====================================================================================
+   MÓDULO 07 - TICKETS TIPO KLARNA + IA
+   Estilos CSS para el módulo de tickets
+   ==================================================================================== */
+
+/* Contenedor principal */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Formulario de filtros */
+.form-actions {
+    margin-top: 20px;
+    text-align: right;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.form-actions .dxbButton {
+    margin-left: 10px;
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    color: #d32f2f;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ffebee;
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+}
+
+.success-message {
+    color: #388e3c;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+}
+
+/* Grid de tickets */
+.grid-tickets {
+    margin-top: 20px;
+}
+
+/* Popup de ticket */
+.popup-ticket {
+    padding: 20px;
+}
+
+/* Tabs del popup */
+.tabs-ticket .dxpc-content {
+    padding: 15px;
+}
+
+/* Formularios dentro de tabs */
+.form-layout-ticket {
+    margin-top: 10px;
+}
+
+/* Grid de conversación */
+.grid-conversacion {
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Mensaje en conversación */
+.mensaje-conversacion {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.mensaje-cliente {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+}
+
+.mensaje-agente {
+    background-color: #f1f8e9;
+    border-left: 4px solid #8bc34a;
+}
+
+.mensaje-ia {
+    background-color: #fff3e0;
+    border-left: 4px solid #ff9800;
+}
+
+.mensaje-sistema {
+    background-color: #f5f5f5;
+    border-left: 4px solid #9e9e9e;
+}
+
+/* Badges de estado */
+.badge-estado {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-estado-abierto {
+    background-color: #ffeb3b;
+    color: #f57f17;
+}
+
+.badge-estado-enproceso {
+    background-color: #2196f3;
+    color: #ffffff;
+}
+
+.badge-estado-resuelto {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.badge-estado-cerrado {
+    background-color: #9e9e9e;
+    color: #ffffff;
+}
+
+.badge-estado-cancelado {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+/* Badges de prioridad */
+.badge-prioridad {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.badge-prioridad-baja {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.badge-prioridad-media {
+    background-color: #fff9c4;
+    color: #f57f17;
+}
+
+.badge-prioridad-alta {
+    background-color: #ffccbc;
+    color: #d84315;
+}
+
+.badge-prioridad-critica {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+/* Badges de sentimiento */
+.badge-sentimiento {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.badge-sentimiento-positivo {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.badge-sentimiento-neutral {
+    background-color: #e0e0e0;
+    color: #616161;
+}
+
+.badge-sentimiento-negativo {
+    background-color: #ffcdd2;
+    color: #c62828;
+}
+
+/* Indicador de resolución por IA */
+.ia-resuelto {
+    background-color: #fff3e0;
+    border: 1px solid #ff9800;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.ia-resuelto::before {
+    content: "🤖 ";
+    font-size: 16px;
+}
+
+/* Campos de solo lectura */
+.readonly-field {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .form-actions {
+        text-align: center;
+    }
+
+    .form-actions .dxbButton {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+}

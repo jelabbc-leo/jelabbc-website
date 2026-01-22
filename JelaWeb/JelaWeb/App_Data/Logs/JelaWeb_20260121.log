@@ -1,0 +1,425 @@
+2026-01-21 15:11:18 [INFO] Aplicación JELA iniciada correctamente
+2026-01-21 15:11:19 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:11:20 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:11:20 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Inicio.aspx
+2026-01-21 15:11:20 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:11:20 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:11:25 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'admin' (Length: 5)
+2026-01-21 15:11:25 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-21 15:11:25 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-21 15:11:25 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-21 15:11:25 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-21 15:11:25 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-21 15:11:26 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 21
+2026-01-21 15:11:26 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 21
+2026-01-21 15:11:26 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, TipoUsuario: Residente)
+2026-01-21 15:11:26 [INFO] DEBUG Login - TipoUsuario recibido: 'Residente'
+2026-01-21 15:11:26 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-21 15:11:26 [INFO] DEBUG Login - ¿Son iguales?: False
+2026-01-21 15:11:26 [INFO] DEBUG Login - Comparación case-insensitive: False
+2026-01-21 15:11:26 [INFO] DEBUG Login - Longitud TipoUsuario: 9
+2026-01-21 15:11:26 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-21 15:11:26 [INFO] Usuario admin es Residente, redirigiendo a inicio
+2026-01-21 15:11:30 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 130
+2026-01-21 15:11:31 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:11:31 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:11:37 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:11:38 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:12:29 [INFO] Aplicación JELA iniciada correctamente
+2026-01-21 15:12:30 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:12:33 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:12:33 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Catalogos/Unidades.aspx
+2026-01-21 15:12:33 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Catalogos/Unidades.aspx
+2026-01-21 15:12:33 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:12:33 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 15:12:38 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'admin' (Length: 5)
+2026-01-21 15:12:38 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-21 15:12:38 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-21 15:12:38 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-21 15:12:38 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-21 15:12:38 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-21 15:12:38 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 21
+2026-01-21 15:12:38 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 21
+2026-01-21 15:12:38 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, TipoUsuario: Residente)
+2026-01-21 15:12:38 [INFO] DEBUG Login - TipoUsuario recibido: 'Residente'
+2026-01-21 15:12:38 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-21 15:12:38 [INFO] DEBUG Login - ¿Son iguales?: False
+2026-01-21 15:12:38 [INFO] DEBUG Login - Comparación case-insensitive: False
+2026-01-21 15:12:38 [INFO] DEBUG Login - Longitud TipoUsuario: 9
+2026-01-21 15:12:38 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-21 15:12:38 [INFO] Usuario admin es Residente, redirigiendo a inicio
+2026-01-21 15:12:44 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 130
+2026-01-21 15:12:44 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:12:44 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:12:48 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:49 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:12:51 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:52 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 15:12:54 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:54 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:12:55 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:12:55 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:55 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:12:55 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:12:55 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:12:55 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:56 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:56 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:12:56 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:12:56 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:12:59 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:12:59 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_residente_archivos' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_residente_archivos' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:12:59 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_residente_archivos' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:12:59 [ERROR] UnidadesService.ProcesarCustomCallbackArchivosResidente
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackArchivosResidente(String parameters, HttpSessionState session) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1561
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_residente_archivos' doesn't exist"}
+2026-01-21 15:13:03 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:03 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_vehiculo_archivos' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_vehiculo_archivos' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:03 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_vehiculo_archivos' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:03 [ERROR] UnidadesService.ProcesarCustomCallbackArchivosVehiculo
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackArchivosVehiculo(String parameters, HttpSessionState session) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1677
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_vehiculo_archivos' doesn't exist"}
+2026-01-21 15:13:06 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:06 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:08 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:09 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:09 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:09 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:09 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:13:09 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:09 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:09 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:09 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:10 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:10 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:10 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:10 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:10 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:12 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:12 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:12 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:12 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:12 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:12 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:12 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:13 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:13 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:13 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:13 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:13:13 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:13 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:14 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:14 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:14 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:14 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:15 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:15 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:15 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:15 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:15 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:15 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:15 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:15 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:13:16 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:16 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:17 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:17 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:17 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:17 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:18 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:18 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:18 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:18 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:18 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:18 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:18 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:18 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:13:19 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:19 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:19 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:20 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:20 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:20 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:20 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:20 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:20 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:20 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 15:13:21 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:21 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:21 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:21 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:21 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:27 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:27 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:31 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:32 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:32 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:32 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 77
+2026-01-21 15:13:32 [ERROR] UnidadesService.ProcesarCustomCallbackDocumentos
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 83
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackDocumentos(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1454
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_documentos_unidad' doesn't exist"}
+2026-01-21 15:13:32 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:32 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-21 15:13:32 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-21 15:13:33 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:33 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:33 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:34 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-21 15:13:34 [ERROR] Error en ObtenerDatos: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 89
+2026-01-21 15:13:34 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 148
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 337
+2026-01-21 15:13:34 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 343
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: 500 - {"type":"https://tools.ietf.org/html/rfc9110#section-15.6.1","title":"Error al ejecutar la consulta","status":500,"detail":"Table 'jela_qa.cat_tags_unidad' doesn't exist"}
+2026-01-21 16:29:00 [INFO] Sesión finalizada - UserId: 1 - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 17:58:46 [INFO] Aplicación JELA iniciada correctamente
+2026-01-21 17:58:47 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 17:58:52 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'admin' (Length: 5)
+2026-01-21 17:58:52 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-21 17:58:52 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-21 17:58:52 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-21 17:58:57 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-21 17:58:57 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-21 17:58:57 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 21
+2026-01-21 17:58:57 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 21
+2026-01-21 17:58:57 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, TipoUsuario: Residente)
+2026-01-21 17:58:57 [INFO] DEBUG Login - TipoUsuario recibido: 'Residente'
+2026-01-21 17:58:57 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-21 17:58:57 [INFO] DEBUG Login - ¿Son iguales?: False
+2026-01-21 17:58:57 [INFO] DEBUG Login - Comparación case-insensitive: False
+2026-01-21 17:58:57 [INFO] DEBUG Login - Longitud TipoUsuario: 9
+2026-01-21 17:58:57 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-21 17:58:57 [INFO] Usuario admin es Residente, redirigiendo a inicio
+2026-01-21 17:59:04 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 130
+2026-01-21 17:59:05 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 17:59:05 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 17:59:13 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 18:04:29 [INFO] Aplicación JELA iniciada correctamente
+2026-01-21 18:04:30 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-21 18:04:35 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'admin' (Length: 5)
+2026-01-21 18:04:35 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-21 18:04:35 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-21 18:04:35 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-21 18:04:36 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-21 18:04:36 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-21 18:04:36 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 21
+2026-01-21 18:04:36 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 21
+2026-01-21 18:04:36 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, TipoUsuario: Residente)
+2026-01-21 18:04:36 [INFO] DEBUG Login - TipoUsuario recibido: 'Residente'
+2026-01-21 18:04:36 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-21 18:04:36 [INFO] DEBUG Login - ¿Son iguales?: False
+2026-01-21 18:04:36 [INFO] DEBUG Login - Comparación case-insensitive: False
+2026-01-21 18:04:36 [INFO] DEBUG Login - Longitud TipoUsuario: 9
+2026-01-21 18:04:36 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-21 18:04:36 [INFO] Usuario admin es Residente, redirigiendo a inicio
+2026-01-21 18:04:42 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 130
+2026-01-21 18:04:43 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 18:04:43 [WARNING] Email no encontrado para usuario 1, usando email por defecto
+2026-01-21 18:04:50 [WARNING] Email no encontrado para usuario 1, usando email por defecto

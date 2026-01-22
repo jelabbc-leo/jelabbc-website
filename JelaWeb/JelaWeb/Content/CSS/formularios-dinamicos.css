@@ -1,0 +1,301 @@
+/**
+ * Formularios Dinámicos - Estilos CSS
+ * Diseñador estilo Visual Studio
+ */
+
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+.container-fluid {
+    padding: 15px;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.alert-warning strong {
+    color: #856404;
+}
+
+/* Estilos para el grid */
+.dxgvControl {
+    border: 1px solid #ddd;
+}
+
+/* Estilos para popups */
+.dxpc-content {
+    padding: 10px;
+}
+
+/* Estilos para formularios dentro de popups */
+.dxflFormLayout {
+    padding: 10px;
+}
+
+/* ========================================
+   DISEÑADOR VISUAL - ESTILO VS
+   ======================================== */
+
+/* Panel Toolbox (izquierdo) */
+.toolbox-panel {
+    height: 100%;
+    background: #f0f0f0;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbox-header {
+    background: linear-gradient(to bottom, #4a90d9, #3a7bc8);
+    color: white;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #2a6bb8;
+}
+
+.toolbox-header i {
+    margin-right: 6px;
+}
+
+.toolbox-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.toolbox-item {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    cursor: grab;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.toolbox-item:hover {
+    background: #e8f4fc;
+    border-color: #4a90d9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.toolbox-item:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.toolbox-item i {
+    width: 20px;
+    color: #4a90d9;
+    margin-right: 8px;
+}
+
+.toolbox-item.dragging {
+    opacity: 0.5;
+    border: 2px dashed #4a90d9;
+}
+
+/* Panel Diseñador (central) */
+.designer-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.designer-toolbar {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.designer-canvas {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: #fafafa;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    min-height: 300px;
+}
+
+.designer-canvas.drag-over {
+    background-color: #e8f4fc;
+    border: 2px dashed #4a90d9;
+}
+
+.designer-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #999;
+    font-size: 14px;
+}
+
+.designer-placeholder i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.designer-placeholder p {
+    margin: 0;
+}
+
+/* Campos en el canvas */
+.designer-field {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.designer-field:hover {
+    border-color: #4a90d9;
+    box-shadow: 0 2px 6px rgba(74,144,217,0.2);
+}
+
+.designer-field.selected {
+    border-color: #4a90d9;
+    border-width: 2px;
+    background: #f0f7ff;
+    box-shadow: 0 0 0 3px rgba(74,144,217,0.2);
+}
+
+.designer-field .field-icon {
+    width: 30px;
+    height: 30px;
+    background: #4a90d9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.designer-field .field-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.designer-field .field-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.designer-field .field-type {
+    font-size: 11px;
+    color: #888;
+}
+
+.designer-field .field-required {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.designer-field .field-actions {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.designer-field:hover .field-actions {
+    opacity: 1;
+}
+
+.designer-field .field-delete {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.designer-field .field-delete:hover {
+    background: #c0392b;
+}
+
+/* Panel Propiedades (derecho) */
+.properties-panel {
+    height: 100%;
+    background: #f8f8f8;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.properties-header {
+    background: linear-gradient(to bottom, #4a90d9, #3a7bc8);
+    color: white;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #2a6bb8;
+}
+
+.properties-header i {
+    margin-right: 6px;
+}
+
+/* Ajustes para el VerticalGrid de propiedades */
+.properties-panel .dxvgControl {
+    border: none !important;
+}
+
+.properties-panel .dxvgHeader {
+    background: #f0f0f0 !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .toolbox-panel {
+        min-width: 150px;
+    }
+    
+    .properties-panel {
+        min-width: 200px;
+    }
+}
+
+/* Animación de drop */
+@keyframes dropHighlight {
+    0% { background-color: #e8f4fc; }
+    100% { background-color: white; }
+}
+
+.designer-field.just-dropped {
+    animation: dropHighlight 0.5s ease;
+}

@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{B1D748BC-8707-47A1-86C4-ACCAEC065D76}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>JelaWeb</RootNamespace>
+    <AssemblyName>JelaWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>JelaWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>JelaWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Web, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\DevExpress.XtraScheduler.v22.2.Core.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\DevExpress.XtraScheduler.v22.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>bin\DevExpress.Web.ASPxScheduler.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Bootstrap.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Resources.en-US.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resources.es-MX.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.es-MX.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\BasePage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Constants.vb" />
+    <Compile Include="Infrastructure\Helpers\AreasComunesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\SubEntidadesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\AuthHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\AuthorizationHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\CacheHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\CalendarioReservacionesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\ComunicadosHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\ConceptosCuotaHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\ConfigHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\CuotasHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\DataTableHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\EntidadHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\EstadoCuentaHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\HttpsHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\Logger.vb" />
+    <Compile Include="Infrastructure\Helpers\PagosHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\QueryBuilder.vb" />
+    <Compile Include="Infrastructure\Helpers\ReservacionesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\ResidentesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\SecurityHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\SessionHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\LocalizationHelper.vb" />
+    <Compile Include="Infrastructure\NamespaceMarkers.vb" />
+    <Compile Include="Infrastructure\Helpers\UnidadesHelper.vb" />
+    <Compile Include="Infrastructure\Helpers\VisitantesHelper.vb" />
+    <Compile Include="Infrastructure\Http\HttpClientHelper.vb" />
+    <Compile Include="Infrastructure\Monitoring\ApplicationInsightsHelper.vb" />
+    <Compile Include="Infrastructure\Validation\ApiErrorHelper.vb" />
+    <Compile Include="Infrastructure\Validation\InputValidator.vb" />
+    <Compile Include="Models\DTOs\CategoriaTicketDTO.vb" />
+    <Compile Include="Models\DTOs\ColoniasDTO.vb" />
+    <Compile Include="Models\DTOs\ConceptosDTO.vb" />
+    <Compile Include="Models\DTOs\TicketDTO.vb" />
+    <Compile Include="Models\DTOs\TicketV2DTO.vb" />
+    <Compile Include="Models\DTOs\UsuarioDTO.vb" />
+    <Compile Include="Models\DTOs\ProveedorDTO.vb" />
+    <Compile Include="Models\DTOs\RolDTO.vb" />
+    <Compile Include="Models\DTOs\TipoSensorDTO.vb" />
+    <Compile Include="Models\DTOs\FitosanitarioDTO.vb" />
+    <Compile Include="Models\DTOs\ParcelaDTO.vb" />
+    <Compile Include="Models\DTOs\UnidadDTO.vb" />
+    <Compile Include="Services\AreasComunesService.vb" />
+    <Compile Include="Services\CategoriaTicketService.vb" />
+    <Compile Include="Services\ComunicadosService.vb" />
+    <Compile Include="Services\ConceptosCuotaService.vb" />
+    <Compile Include="Services\CuotasService.vb" />
+    <Compile Include="Services\DocumentIntelligenceHandler.ashx.vb">
+      <DependentUpon>DocumentIntelligenceHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DocumentIntelligenceProxy.ashx.vb">
+      <DependentUpon>DocumentIntelligenceProxy.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\OpenAIProxy.ashx.vb">
+      <DependentUpon>OpenAIProxy.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\UserInfoHandler.ashx.vb">
+      <DependentUpon>UserInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DynamicCrudService.vb" />
+    <Compile Include="Services\EstadoCuentaService.vb" />
+    <Compile Include="Services\FitosanitarioService.vb" />
+    <Compile Include="Services\PagosService.vb" />
+    <Compile Include="Services\ParcelaService.vb" />
+    <Compile Include="Services\ProveedorService.vb" />
+    <Compile Include="Services\ReservacionesService.vb" />
+    <Compile Include="Services\ResidentesService.vb" />
+    <Compile Include="Services\RolService.vb" />
+    <Compile Include="Services\SubEntidadesService.vb" />
+    <Compile Include="Services\TicketService.vb" />
+    <Compile Include="Services\TipoSensorService.vb" />
+    <Compile Include="Services\UnidadService.vb" />
+    <Compile Include="Services\UnidadesService.vb" />
+    <Compile Include="Services\VisitantesService.vb" />
+    <Compile Include="Services\VisorArchivoService.vb" />
+    <Compile Include="Services\ResidentesTelegramService.vb" />
+    <Compile Include="Services\FormularioService.vb" />
+    <Compile Include="Services\DocumentIntelligenceService.vb" />
+    <Compile Include="Services\FormularioRenderService.vb" />
+    <Compile Include="Models\DTOs\FormularioDTO.vb" />
+    <Compile Include="Business\Operacion\TicketsBusiness.vb" />
+    <Compile Include="Business\Operacion\DashboardBusiness.vb" />
+    <Compile Include="Models\DTOs\DashboardMetricsDTO.vb" />
+    <Compile Include="Models\DTOs\ChartDataPointDTO.vb" />
+    <Compile Include="Utilities\FuncionesGridWeb.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Jela.Master.designer.vb">
+      <DependentUpon>Jela.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Jela.Master.vb">
+      <DependentUpon>Jela.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Auth\SelectorEntidades.aspx.designer.vb">
+      <DependentUpon>SelectorEntidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\SelectorEntidades.aspx.vb">
+      <DependentUpon>SelectorEntidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Auth\Ingreso.aspx.designer.vb">
+      <DependentUpon>Ingreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\Ingreso.aspx.vb">
+      <DependentUpon>Ingreso.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Auth\Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Services\API\ApiConsumer.vb" />
+    <Compile Include="Services\API\ApiConsumerCRUD.vb" />
+    <Compile Include="Services\API\ApiService.vb" />
+    <Compile Include="Services\API\DynamicDto.vb" />
+    <Compile Include="Services\API\JwtTokenService.vb" />
+    <Compile Include="Services\Auth\AuthService.vb" />
+    <Compile Include="Views\Auth\Test.aspx.designer.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\Test.aspx.vb">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\AreasComunes.aspx.designer.vb">
+      <DependentUpon>AreasComunes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\AreasComunes.aspx.vb">
+      <DependentUpon>AreasComunes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\SubEntidades.aspx.designer.vb">
+      <DependentUpon>SubEntidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\SubEntidades.aspx.vb">
+      <DependentUpon>SubEntidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\CategoriasTicket.aspx.designer.vb">
+      <DependentUpon>CategoriasTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\CategoriasTicket.aspx.vb">
+      <DependentUpon>CategoriasTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Conceptos.aspx.designer.vb">
+      <DependentUpon>Conceptos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Conceptos.aspx.vb">
+      <DependentUpon>Conceptos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\ConceptosCuota.aspx.designer.vb">
+      <DependentUpon>ConceptosCuota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\ConceptosCuota.aspx.vb">
+      <DependentUpon>ConceptosCuota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Fitosanitarios.aspx.designer.vb">
+      <DependentUpon>Fitosanitarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Fitosanitarios.aspx.vb">
+      <DependentUpon>Fitosanitarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Residentes.aspx.designer.vb">
+      <DependentUpon>Residentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Residentes.aspx.vb">
+      <DependentUpon>Residentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\ResidentesTelegram.aspx.designer.vb">
+      <DependentUpon>ResidentesTelegram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\ResidentesTelegram.aspx.vb">
+      <DependentUpon>ResidentesTelegram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Config\FormulariosDinamicos.aspx.designer.vb">
+      <DependentUpon>FormulariosDinamicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Config\FormulariosDinamicos.aspx.vb">
+      <DependentUpon>FormulariosDinamicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Config\FormularioDisenador.aspx.designer.vb">
+      <DependentUpon>FormularioDisenador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Config\FormularioDisenador.aspx.vb">
+      <DependentUpon>FormularioDisenador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Config\FormularioVistaPrevia.aspx.designer.vb">
+      <DependentUpon>FormularioVistaPrevia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Config\FormularioVistaPrevia.aspx.vb">
+      <DependentUpon>FormularioVistaPrevia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Parcelas.aspx.designer.vb">
+      <DependentUpon>Parcelas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Parcelas.aspx.vb">
+      <DependentUpon>Parcelas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Proveedores.aspx.designer.vb">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Proveedores.aspx.vb">
+      <DependentUpon>Proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Roles.aspx.designer.vb">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Roles.aspx.vb">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\TiposSensor.aspx.designer.vb">
+      <DependentUpon>TiposSensor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\TiposSensor.aspx.vb">
+      <DependentUpon>TiposSensor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Unidades.aspx.designer.vb">
+      <DependentUpon>Unidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Unidades.aspx.vb">
+      <DependentUpon>Unidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Inicio.aspx.designer.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Inicio.aspx.vb">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Entidades.aspx.designer.vb">
+      <DependentUpon>Entidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Entidades.aspx.vb">
+      <DependentUpon>Entidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\CapturaDocumentos.aspx.designer.vb">
+      <DependentUpon>CapturaDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\CapturaDocumentos.aspx.vb">
+      <DependentUpon>CapturaDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Error\Error.aspx.designer.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Error\Error.aspx.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\IOT\IOT.aspx.designer.vb">
+      <DependentUpon>IOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IOT\IOT.aspx.vb">
+      <DependentUpon>IOT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\CalendarioReservaciones.aspx.designer.vb">
+      <DependentUpon>CalendarioReservaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\CalendarioReservaciones.aspx.vb">
+      <DependentUpon>CalendarioReservaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Comunicados.aspx.designer.vb">
+      <DependentUpon>Comunicados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Comunicados.aspx.vb">
+      <DependentUpon>Comunicados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogos\Cuotas.aspx.designer.vb">
+      <DependentUpon>Cuotas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Catalogos\Cuotas.aspx.vb">
+      <DependentUpon>Cuotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\EstadoCuenta.aspx.designer.vb">
+      <DependentUpon>EstadoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\EstadoCuenta.aspx.vb">
+      <DependentUpon>EstadoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Pagos.aspx.designer.vb">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Pagos.aspx.vb">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Reservaciones.aspx.designer.vb">
+      <DependentUpon>Reservaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Reservaciones.aspx.vb">
+      <DependentUpon>Reservaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Visitantes.aspx.designer.vb">
+      <DependentUpon>Visitantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Condominios\Visitantes.aspx.vb">
+      <DependentUpon>Visitantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\Tickets\Tickets.aspx.designer.vb">
+      <DependentUpon>Tickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\Tickets\Tickets.aspx.vb">
+      <DependentUpon>Tickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Operacion\GestionDocumentos\GestionDocumentosMenu.aspx.designer.vb">
+      <DependentUpon>GestionDocumentosMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Operacion\GestionDocumentos\GestionDocumentosMenu.aspx.vb">
+      <DependentUpon>GestionDocumentosMenu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resources.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resources.en-US.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resources.es-MX.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resources.es-MX.designer.vb</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\areas-comunes.css" />
+    <Content Include="Content\CSS\comunicados.css" />
+    <Content Include="Content\CSS\conceptos-cuota.css" />
+    <Content Include="Content\CSS\cuotas.css" />
+    <Content Include="Content\CSS\estado-cuenta.css" />
+    <Content Include="Content\CSS\formulario-disenador.css" />
+    <Content Include="Content\CSS\formulario-vistaprevia.css" />
+    <Content Include="Content\CSS\pagos.css" />
+    <Content Include="Content\CSS\reservaciones.css" />
+    <Content Include="Content\CSS\residentes-telegram.css" />
+    <Content Include="Content\CSS\residentes.css" />
+    <Content Include="Content\CSS\unidades.css" />
+    <Content Include="Content\CSS\visitantes.css" />
+    <Content Include="Content\Images\Iconos\BOContact2_16x16.png" />
+    <Content Include="Content\Images\Iconos\calendario.png" />
+    <Content Include="Content\Images\Iconos\casa.png" />
+    <Content Include="Content\Images\Iconos\colaboradores.png" />
+    <Content Include="Content\Images\Iconos\Colonia.png" />
+    <Content Include="Content\Images\Iconos\comunicado.png" />
+    <Content Include="Content\Images\Iconos\dinero.png" />
+    <Content Include="Content\Images\Iconos\documentos.png" />
+    <Content Include="Content\Images\Iconos\estadocta.png" />
+    <Content Include="Content\Images\Iconos\formulario.png" />
+    <Content Include="Content\Images\Iconos\PageOrientation_16x16.png" />
+    <Content Include="Content\Images\Iconos\Pagos.png" />
+    <Content Include="Content\Images\Iconos\reserva.png" />
+    <Content Include="Content\Images\Iconos\rsc.png" />
+    <Content Include="Content\Images\Iconos\Sensor.png" />
+    <Content Include="Content\Images\Iconos\servicios.png" />
+    <Content Include="Content\Images\Iconos\Tareas.png" />
+    <Content Include="Content\Images\Iconos\tarifas.png" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\jela-front - Web Deploy.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Iconos\empleado.png" />
+    <Content Include="Content\Images\Iconos\Entidad.png" />
+    <Content Include="Content\Images\Iconos\SubEntidad.png" />
+    <Content Include="Content\Images\Iconos\UserGroup_16x16.png" />
+    <Content Include="Content\Images\Logo.jpg" />
+    <Content Include="Content\Images\Logo.png" />
+    <Content Include="Content\Images\LogoJelaBBC.png" />
+    <Content Include="Content\Styles\error-pages.css" />
+    <Content Include="Content\Styles\error.css" />
+    <Content Include="Content\Styles\login.css" />
+    <Content Include="Content\Styles\selector-entidades.css" />
+    <Content Include="Content\Styles\site.css" />
+    <Content Include="Content\CSS\formularios-dinamicos.css" />
+    <Content Include="Content\CSS\entidades.css" />
+    <Content Include="Content\CSS\catalogos.css" />
+    <Content Include="Content\CSS\capturadocumentos.css" />
+    <Content Include="Content\CSS\gestiondocumentos.css" />
+    <Content Include="Content\CSS\gestiondocumentosmenu.css" />
+    <Content Include="Content\CSS\iot.css" />
+    <Content Include="Content\CSS\tickets.css" />
+    <Content Include="Content\CSS\chat-widget.css" />
+    <Content Include="Content\CSS\modules\sub-entidades.css" />
+    <Content Include="MasterPages\Jela.Master" />
+    <Content Include="Scripts\app\IOT\iot.js" />
+    <Content Include="Scripts\app\Operacion\Tickets\tickets.js" />
+    <Content Include="Scripts\widgets\chat-widget.js" />
+    <Content Include="Views\Auth\SelectorEntidades.aspx" />
+    <Content Include="Views\Auth\Ingreso.aspx" />
+    <Content Include="Views\Auth\Logout.aspx" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\app\Catalogos\Cat_Conceptos.js" />
+    <Content Include="Scripts\app\Catalogos\formularios-dinamicos.js" />
+    <Content Include="Scripts\app\Catalogos\formulario-disenador.js" />
+    <Content Include="Scripts\app\Catalogos\formulario-vistaprevia.js" />
+    <Content Include="Scripts\app\Catalogos\entidades.js" />
+    <Content Include="Scripts\app\Catalogos\unidades.js" />
+    <Content Include="Scripts\app\Catalogos\residentes.js" />
+    <Content Include="Scripts\app\Catalogos\areas-comunes.js" />
+    <Content Include="Scripts\app\Catalogos\conceptos-cuota.js" />
+    <Content Include="Scripts\app\Catalogos\residentes-telegram.js" />
+    <Content Include="Scripts\app\Catalogos\sub-entidades.js" />
+    <Content Include="Scripts\app\Operacion\comunicados.js" />
+    <Content Include="Scripts\app\Operacion\reservaciones.js" />
+    <Content Include="Scripts\app\Operacion\visitantes.js" />
+    <Content Include="Scripts\app\Operacion\calendario-reservaciones.js" />
+    <Content Include="Scripts\app\Operacion\estado-cuenta.js" />
+    <Content Include="Scripts\app\Operacion\cuotas.js" />
+    <Content Include="Scripts\app\Operacion\pagos.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\app\Operacion\capturadocumentos.js" />
+    <Content Include="Scripts\app\Operacion\gestiondocumentosmenu.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Views\Auth\Test.aspx" />
+    <Content Include="Views\Catalogos\AreasComunes.aspx" />
+    <Content Include="Views\Catalogos\SubEntidades.aspx" />
+    <Content Include="Views\Catalogos\CategoriasTicket.aspx" />
+    <Content Include="Views\Catalogos\Conceptos.aspx" />
+    <Content Include="Views\Catalogos\ConceptosCuota.aspx" />
+    <Content Include="Views\Catalogos\Fitosanitarios.aspx" />
+    <Content Include="Views\Catalogos\Residentes.aspx" />
+    <Content Include="Views\Catalogos\ResidentesTelegram.aspx" />
+    <Content Include="Views\Config\FormulariosDinamicos.aspx" />
+    <Content Include="Views\Config\FormularioDisenador.aspx" />
+    <Content Include="Views\Config\FormularioVistaPrevia.aspx" />
+    <Content Include="Views\Catalogos\Parcelas.aspx" />
+    <Content Include="Views\Catalogos\Proveedores.aspx" />
+    <Content Include="Views\Catalogos\Roles.aspx" />
+    <Content Include="Views\Catalogos\TiposSensor.aspx" />
+    <Content Include="Views\Catalogos\Unidades.aspx" />
+    <Content Include="Views\Inicio.aspx" />
+    <Content Include="Views\Catalogos\Entidades.aspx" />
+    <Content Include="Views\Operacion\CapturaDocumentos.aspx" />
+    <Content Include="Views\Operacion\Condominios\CalendarioReservaciones.aspx" />
+    <Content Include="Views\Operacion\Condominios\Comunicados.aspx" />
+    <Content Include="Views\Catalogos\Cuotas.aspx" />
+    <Content Include="Views\Operacion\Condominios\EstadoCuenta.aspx" />
+    <Content Include="Views\Operacion\Condominios\Pagos.aspx" />
+    <Content Include="Views\Operacion\Condominios\Reservaciones.aspx" />
+    <Content Include="Views\Operacion\Condominios\Visitantes.aspx" />
+    <Content Include="Views\Operacion\GestionDocumentos\GestionDocumentosMenu.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Views\IOT\IOT.aspx" />
+    <Content Include="Views\Error\Error.aspx" />
+    <Content Include="Views\Operacion\Tickets\Tickets.aspx" />
+    <Content Include="Web.config" />
+    <None Include="packages.config" />
+    <Content Include="Properties\ServiceDependencies\jela-front - Web Deploy\profile.arm.json" />
+    <Content Include="Services\DocumentIntelligenceHandler.ashx" />
+    <Content Include="Services\DocumentIntelligenceProxy.ashx" />
+    <Content Include="Services\OpenAIProxy.ashx" />
+    <Content Include="Services\UserInfoHandler.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <!--<Content Include="Site.Master" />-->
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>-->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21754</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:21754/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

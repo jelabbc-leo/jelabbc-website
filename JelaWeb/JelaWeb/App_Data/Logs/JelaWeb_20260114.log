@@ -1,0 +1,971 @@
+2026-01-14 09:58:41 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 09:58:41 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 09:58:50 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 09:58:50 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 09:58:50 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 09:58:50 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 09:58:50 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 09:58:50 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 09:58:53 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 09:58:59 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 09:58:59 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 09:58:59 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:00 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 09:59:00 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 09:59:08 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 09:59:08 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 09:59:08 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 09:59:09 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:09 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 09:59:09 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 609
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 09:59:09 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:09 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 09:59:09 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 712
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 09:59:14 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 09:59:14 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 09:59:14 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:14 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 09:59:14 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 09:59:16 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 09:59:20 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 09:59:21 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 09:59:21 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 09:59:21 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:21 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 09:59:21 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 712
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 09:59:22 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:22 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 09:59:22 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 609
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 09:59:28 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 09:59:28 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 09:59:28 [ERROR] Unidades.gridArchivosResidente_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosResidente_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1715
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:02:47 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:02:48 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:02:54 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:02:54 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:02:55 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:02:55 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:02:55 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:02:55 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:02:57 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:03:14 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:03:14 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:03:14 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:03:15 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:03:15 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:03:29 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:03:29 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:03:29 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:03:29 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:03:29 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:03:29 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 791
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:03:30 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:03:30 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:03:30 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 688
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:11:42 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:11:43 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:11:48 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:11:48 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:11:48 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:11:48 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:11:48 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:11:48 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:11:51 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:11:59 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:11:59 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:11:59 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:00 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:12:00 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:12:04 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:12:04 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:04 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:12:04 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 688
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:12:05 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:05 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:12:05 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 791
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:12:05 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:12:05 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:12:13 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:13 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:12:13 [ERROR] Unidades.gridArchivosVehiculo_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosVehiculo_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1913
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:12:23 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:12:23 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:12:23 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:12:24 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:24 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:12:24 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 688
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:12:25 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:12:25 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:12:25 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 791
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:15:23 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:15:23 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:15:23 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:15:24 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:15:24 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:18:06 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:18:06 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:18:16 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:18:16 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:18:16 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:18:16 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:18:16 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:18:16 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:18:17 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:18:22 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:18:22 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:18:22 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:18:23 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:18:23 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:18:28 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:18:28 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:18:28 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:18:28 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:18:28 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:20:07 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:20:07 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:20:07 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:20:07 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:20:08 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:22:55 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:22:55 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:22:55 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:22:55 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:22:55 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:25:39 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:25:39 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:25:39 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:25:40 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:25:40 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:28:26 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:28:26 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:28:26 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:28:26 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:28:26 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:28:34 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:28:34 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:28:38 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:28:38 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:28:39 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:28:39 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:28:39 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:28:39 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:28:40 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:28:46 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:28:46 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:28:46 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:28:46 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:28:46 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:28:52 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:28:52 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:28:52 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:28:52 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:28:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:32:52 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:32:52 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:32:52 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:32:52 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:32:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:33:05 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:33:05 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:33:05 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:33:05 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:33:05 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:33:12 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:33:12 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:33:12 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:33:12 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:33:12 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:33:16 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:33:16 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:33:17 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:33:17 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:33:17 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:33:17 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 791
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:33:18 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:33:18 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:33:18 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 688
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:37:19 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:37:19 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:37:24 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:37:24 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:37:24 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:37:24 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:37:24 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:37:24 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:37:27 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:37:34 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:37:34 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:37:34 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:37:35 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:37:35 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:37:41 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:37:41 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:37:41 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:37:41 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:37:41 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:37:44 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:37:44 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:37:44 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:37:45 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:37:45 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:37:45 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 711
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:37:45 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:37:45 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:37:45 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 608
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:38:05 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:38:05 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:38:05 [ERROR] Unidades.gridArchivosVehiculo_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosVehiculo_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1833
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:42:08 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:42:08 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:42:14 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:42:14 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:42:14 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:42:14 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:42:14 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:42:14 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:42:17 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:42:24 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:42:24 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:42:24 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:42:25 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:42:25 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:42:28 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:42:29 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:42:29 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:42:29 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:42:29 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:42:29 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 689
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:42:30 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:42:30 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:42:30 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 792
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:45:52 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 10:45:52 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 10:50:46 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 10:50:46 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 10:50:46 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 10:50:46 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 10:50:46 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 10:50:47 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-14 10:50:49 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:50:56 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:50:56 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:50:56 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:50:57 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:50:57 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:51:01 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:51:01 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:51:01 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:51:02 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:51:02 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:51:02 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 796
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:51:03 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:51:03 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:51:03 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 693
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:51:04 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:51:04 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:51:04 [ERROR] Unidades.gridArchivosResidente_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosResidente_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1799
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:51:12 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:51:12 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:51:12 [ERROR] Unidades.gridArchivosVehiculo_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosVehiculo_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1918
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:51:18 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:51:18 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:51:18 [ERROR] Unidades.gridArchivosVehiculo_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosVehiculo_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1918
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_vehiculo_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:52:10 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:52:10 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:52:10 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:10 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:52:10 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 10:52:13 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:52:13 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:52:13 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:52:14 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:14 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:52:14 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 796
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:52:14 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:14 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:52:14 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 693
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:52:18 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-14 10:52:18 [INFO] Unidades.gridResidentes_CustomCallback - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 10:52:18 [INFO] Unidades.gridResidentes_CustomCallback - Rows: 3
+2026-01-14 10:52:19 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:19 [ERROR] DynamicCrudService.ObtenerTodosConFiltro
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 47
+2026-01-14 10:52:19 [ERROR] Unidades.gridDocumentos_CustomCallback
+Exception: ApplicationException
+Message: Error al obtener registros de cat_documentos_unidad
+Stack Trace:    en JelaWeb.DynamicCrudService.ObtenerTodosConFiltro(String tableName, String whereClause) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 52
+   en JelaWeb.Unidades.gridDocumentos_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 796
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_documentos_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:52:20 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:20 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:52:20 [ERROR] Unidades.gridTags_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridTags_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 693
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+2026-01-14 10:52:21 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:52:21 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 115
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 249
+2026-01-14 10:52:21 [ERROR] Unidades.gridArchivosResidente_CustomCallback
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 254
+   en JelaWeb.Unidades.gridArchivosResidente_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Catalogos\Unidades.aspx.vb:línea 1799
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_residente_archivos' doesn't exist (HTTP 500)
+2026-01-14 10:53:41 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 10:53:41 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 10:53:41 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-14 10:53:41 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 10:53:41 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:03:50 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:03:53 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:05:56 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:05:58 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:05:59 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:08:44 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:12:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-14 11:43:01 [INFO] Sesión finalizada - UserId: 1 - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 12:12:12 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 12:12:12 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Inicio.aspx
+2026-01-14 18:52:16 [INFO] Aplicación JELA iniciada correctamente
+2026-01-14 18:52:16 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-14 18:52:31 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-14 18:52:31 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-14 18:52:31 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-14 18:52:31 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-14 18:52:31 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-14 18:52:31 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 96
+2026-01-14 18:52:34 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 388
+2026-01-14 18:52:42 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-14 18:52:42 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-14 18:52:42 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 77
+2026-01-14 18:52:43 [INFO] Unidades.CargarDatos: 1 unidades cargadas
+2026-01-14 18:52:43 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 388
+2026-01-14 18:52:57 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Query: SELECT r.Id, IFNULL(e.RazonSocial, '') AS NombreEntidad, IFNULL(se.RazonSocial, '') AS NombreSubEntidad, CONCAT(IFNULL(u.Codigo, ''), ' - ', IFNULL(u.Nombre, '')) AS NombreUnidad, CONCAT(IFNULL(r.Nombre, ''), ' ', IFNULL(r.ApellidoPaterno, ''), ' ', IFNULL(r.ApellidoMaterno,'')) AS NombreCompleto, IFNULL(r.TipoResidente, '') AS TipoResidente, CAST(IFNULL(r.EsPrincipal, 0) AS UNSIGNED) AS EsPrincipal, IFNULL(r.Email, '') AS Email, IFNULL(r.TelefonoCelular, '') AS Celular, IFNULL(r.CURP, '') AS CURP FROM cat_residentes r INNER JOIN cat_unidades u ON r.UnidadId = u.Id INNER JOIN cat_entidades e ON u.entidad_id = e.Id LEFT JOIN cat_sub_entidades se ON u.SubEntidadId = se.Id WHERE r.UnidadId = 1 ORDER BY r.EsPrincipal DESC, r.Nombre
+2026-01-14 18:52:57 [INFO] UnidadesService.ProcesarCustomCallbackResidentes - Rows: 3
+2026-01-14 18:53:04 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 77
+2026-01-14 18:53:04 [ERROR] DynamicCrudService.EjecutarConsulta
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 131
+   en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 280
+2026-01-14 18:53:04 [ERROR] UnidadesService.ProcesarCustomCallbackTags
+Exception: ApplicationException
+Message: Error al ejecutar consulta
+Stack Trace:    en JelaWeb.DynamicCrudService.EjecutarConsulta(String query) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\DynamicCrudService.vb:línea 286
+   en JelaWeb.UnidadesService.ProcesarCustomCallbackTags(String parameters, HttpSessionState session, String unidadIdActual) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\UnidadesService.vb:línea 1362
+Inner Exception: Error al consumir la API: Error al ejecutar la consulta: Table 'jela_qa.cat_tags_unidad' doesn't exist (HTTP 500)

@@ -1,0 +1,129 @@
+{
+  "name": "Login Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "login",
+        "options": {
+          "responsePropertyName": "data"
+        }
+      },
+      "id": "Webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT Id, PasswordHash, Nombre, Activo FROM conf_Usuarios WHERE Username = :username AND Activo = 1;",
+        "values": {
+          "string": [
+            {
+              "name": "username",
+              "value": "={{$json[\"username\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "MySQL-Usuario",
+      "name": "MySQL Usuario",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 1,
+      "credentials": {
+        "mySql": "Azure MySQL JELA"
+      },
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const crypto = require('crypto');\n\nif (items.length === 0) {\n  return [{json:{success:false,message:\"Usuario no encontrado\"}}];\n}\n\nconst inputPassword = $json[\"password\"];\nconst hashBD = items[0].json.PasswordHash;\n\nconst hashInput = crypto.createHash('sha256').update(inputPassword).digest('hex');\n\nif (hashInput === hashBD) {\n  return [{json:{success:true,userId:items[0].json.Id,nombre:items[0].json.Nombre}}];\n} else {\n  return [{json:{success:false,message:\"Credenciales inválidas\"}}];\n}"
+      },
+      "id": "Function-Validacion",
+      "name": "Validar Password",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.Plataforma\nFROM conf_Opciones o\nINNER JOIN conf_RolOpciones ro ON o.Id = ro.OpcionId\nINNER JOIN conf_UsuarioRoles ur ON ro.RolId = ur.RolId\nWHERE ur.UsuarioId = :userId AND (o.Plataforma = 'web' OR o.Plataforma = 'both');",
+        "values": {
+          "number": [
+            {
+              "name": "userId",
+              "value": "={{$json[\"userId\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "MySQL-Opciones",
+      "name": "MySQL Opciones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 1,
+      "credentials": {
+        "mySql": "Azure MySQL JELA"
+      },
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "Respond",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "MySQL-Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MySQL-Usuario": {
+      "main": [
+        [
+          {
+            "node": "Validar Password",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Password": {
+      "main": [
+        [
+          {
+            "node": "MySQL-Opciones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MySQL-Opciones": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

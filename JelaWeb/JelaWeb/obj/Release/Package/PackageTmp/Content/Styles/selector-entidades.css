@@ -1,0 +1,393 @@
+/* ============================================
+   SELECTOR DE ENTIDADES - JELA BBC
+   Estilos para la página de selección de entidad
+   ============================================ */
+
+/* Wrapper principal */
+.selector-wrapper {
+    min-height: 100vh;
+    background: #E4EFFA;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.selector-container {
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+/* Header con logo y bienvenida */
+.selector-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.selector-header .logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.selector-header h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.selector-header .user-name {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Grid de tarjetas de entidades */
+.entidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Tarjeta de entidad - ahora es clickeable */
+.entidad-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.entidad-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+    text-decoration: none;
+}
+
+.entidad-card:active {
+    transform: translateY(-4px);
+}
+
+/* Logo de la entidad */
+.entidad-logo {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+    transition: all 0.3s ease;
+}
+
+.entidad-card:hover .entidad-logo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.entidad-logo i {
+    font-size: 4rem;
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.entidad-card:hover .entidad-logo i {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Información de la entidad */
+.entidad-info {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.entidad-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.entidad-card:hover .entidad-info h3 {
+    color: #667eea;
+}
+
+.entidad-direccion {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.entidad-info .badge {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+}
+
+/* Flecha indicadora */
+.entidad-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.entidad-arrow i {
+    color: #667eea;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.entidad-card:hover .entidad-arrow {
+    background: #667eea;
+    transform: scale(1.1);
+}
+
+.entidad-card:hover .entidad-arrow i {
+    color: white;
+    transform: translateX(3px);
+}
+
+/* Footer con acciones */
+.selector-footer {
+    border-top: 1px solid #e9ecef;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.licencias-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-actions .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-actions .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay progresivo para las tarjetas */
+.entidad-card:nth-child(1) { animation-delay: 0.1s; }
+.entidad-card:nth-child(2) { animation-delay: 0.2s; }
+.entidad-card:nth-child(3) { animation-delay: 0.3s; }
+.entidad-card:nth-child(4) { animation-delay: 0.4s; }
+.entidad-card:nth-child(5) { animation-delay: 0.5s; }
+.entidad-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selector-wrapper {
+        padding: 20px 10px;
+    }
+
+    .selector-container {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .selector-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .entidades-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer-actions .btn {
+        width: 100%;
+    }
+
+    /* Botones flotantes en móvil */
+    .floating-buttons {
+        top: 15px;
+        right: 15px;
+        gap: 12px;
+    }
+
+    .btn-floating {
+        width: 55px;
+        height: 55px;
+    }
+
+    .btn-floating::before {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================
+   BOTONES FLOTANTES - CIRCULARES CON ICONOS
+   ============================================ */
+
+.floating-buttons {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    animation: fadeInRight 0.5s ease;
+}
+
+.btn-floating {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    position: relative;
+    text-decoration: none !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden;
+}
+
+.btn-floating:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-decoration: none !important;
+}
+
+.btn-floating:active {
+    transform: scale(1.05);
+}
+
+/* Botón Agregar - Azul circular */
+.btn-floating-add {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    color: white !important;
+}
+
+.btn-floating-add:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%) !important;
+    color: white !important;
+}
+
+.btn-floating-add::after {
+    content: "\f067"; /* fa-plus */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+}
+
+/* Botón Cerrar Sesión - Rojo circular */
+.btn-floating-logout {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+    color: white !important;
+}
+
+.btn-floating-logout:hover {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%) !important;
+    color: white !important;
+}
+
+.btn-floating-logout::after {
+    content: "\f2f5"; /* fa-sign-out-alt */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+}
+
+/* Animación de entrada */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

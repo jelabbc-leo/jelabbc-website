@@ -1,0 +1,35 @@
+/* Estilos para el módulo de Sub Entidades */
+.subentidades-grid-container {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+    overflow-x: auto;
+}
+
+.subentidades-popup .dxpc-content {
+    background: #E4EFFA;
+}
+
+.subentidades-popup-footer {
+    text-align: right;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+.subentidades-popup-footer .dxbButton {
+    margin-left: 10px;
+}
+
+.subentidades-grid-container .dxgvControl,
+.subentidades-grid-container .dxgvControl > table {
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .subentidades-grid-container {
+        padding: 0;
+    }
+}

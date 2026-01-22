@@ -1,0 +1,667 @@
+/**
+ * JELA Chat Widget - Estilos
+ * Sistema JELABBC - Módulo de Tickets Colaborativos
+ * 
+ * Características:
+ * - Diseño moderno y responsivo
+ * - Animaciones suaves
+ * - Temas personalizables (blue, green, purple)
+ * - Compatible con dispositivos móviles
+ * - Z-index alto para estar siempre visible
+ */
+
+/* ========================================
+   VARIABLES CSS
+   ======================================== */
+
+:root {
+    --jela-chat-primary-blue: #0066cc;
+    --jela-chat-primary-green: #28a745;
+    --jela-chat-primary-purple: #6f42c1;
+    --jela-chat-primary-dark: #003d7a;
+    --jela-chat-bg-light: #f8f9fa;
+    --jela-chat-bg-white: #ffffff;
+    --jela-chat-text-dark: #212529;
+    --jela-chat-text-muted: #6c757d;
+    --jela-chat-border: #dee2e6;
+    --jela-chat-shadow: rgba(0, 0, 0, 0.15);
+    --jela-chat-shadow-lg: rgba(0, 0, 0, 0.25);
+    --jela-chat-user-bg: #e3f2fd;
+    --jela-chat-bot-bg: #f5f5f5;
+    --jela-chat-system-bg: #fff3cd;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.jela-chat-widget {
+    position: fixed;
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Posicionamiento */
+.jela-chat-bottom-right {
+    bottom: 40px;
+    right: 20px;
+}
+
+.jela-chat-bottom-left {
+    bottom: 40px;
+    left: 20px;
+}
+
+/* ========================================
+   BOTÓN FLOTANTE
+   ======================================== */
+
+.jela-chat-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--jela-chat-primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px var(--jela-chat-shadow-lg);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.jela-chat-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px var(--jela-chat-shadow-lg);
+}
+
+.jela-chat-button i {
+    font-size: 28px;
+}
+
+.jela-chat-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   VENTANA DE CHAT
+   ======================================== */
+
+.jela-chat-window {
+    position: fixed;
+    bottom: 70px;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    height: 600px;
+    max-height: calc(100vh - 100px);
+    background: var(--jela-chat-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px var(--jela-chat-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: jela-chat-slide-up 0.3s ease;
+}
+
+.jela-chat-bottom-right .jela-chat-window {
+    right: 20px;
+}
+
+.jela-chat-bottom-left .jela-chat-window {
+    left: 20px;
+}
+
+@keyframes jela-chat-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de minimizar */
+.jela-chat-minimized .jela-chat-window {
+    animation: jela-chat-slide-down 0.3s ease;
+}
+
+@keyframes jela-chat-slide-down {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.jela-chat-header {
+    background: var(--jela-chat-primary-blue);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.jela-chat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.jela-chat-header-content i {
+    font-size: 32px;
+}
+
+.jela-chat-header-text h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.jela-chat-status {
+    font-size: 12px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.jela-chat-status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    display: inline-block;
+    animation: jela-chat-pulse 2s infinite;
+}
+
+@keyframes jela-chat-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.jela-chat-header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.jela-chat-header-actions button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.jela-chat-header-actions button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   BODY - ÁREA DE MENSAJES
+   ======================================== */
+
+.jela-chat-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.jela-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Scrollbar personalizado */
+.jela-chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.jela-chat-messages::-webkit-scrollbar-track {
+    background: var(--jela-chat-bg-light);
+}
+
+.jela-chat-messages::-webkit-scrollbar-thumb {
+    background: var(--jela-chat-border);
+    border-radius: 3px;
+}
+
+.jela-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--jela-chat-text-muted);
+}
+
+/* ========================================
+   MENSAJE DE BIENVENIDA
+   ======================================== */
+
+.jela-chat-welcome {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--jela-chat-text-muted);
+}
+
+.jela-chat-welcome i {
+    font-size: 64px;
+    color: var(--jela-chat-primary-blue);
+    margin-bottom: 16px;
+}
+
+.jela-chat-welcome h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: var(--jela-chat-text-dark);
+}
+
+.jela-chat-welcome p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ========================================
+   MENSAJES
+   ======================================== */
+
+.jela-chat-message {
+    display: flex;
+    gap: 12px;
+    animation: jela-chat-fade-in 0.3s ease;
+}
+
+@keyframes jela-chat-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jela-chat-message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--jela-chat-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+    color: var(--jela-chat-text-muted);
+}
+
+.jela-chat-message-user .jela-chat-message-avatar {
+    background: var(--jela-chat-primary-blue);
+    color: white;
+}
+
+.jela-chat-message-bot .jela-chat-message-avatar {
+    background: var(--jela-chat-bg-light);
+    color: var(--jela-chat-primary-blue);
+}
+
+.jela-chat-message-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.jela-chat-message-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.jela-chat-message-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--jela-chat-text-dark);
+}
+
+.jela-chat-message-time {
+    font-size: 11px;
+    color: var(--jela-chat-text-muted);
+}
+
+.jela-chat-message-text {
+    background: var(--jela-chat-bot-bg);
+    padding: 10px 14px;
+    border-radius: 12px;
+    word-wrap: break-word;
+    color: var(--jela-chat-text-dark);
+}
+
+.jela-chat-message-user .jela-chat-message-text {
+    background: var(--jela-chat-user-bg);
+}
+
+.jela-chat-message-system .jela-chat-message-text {
+    background: var(--jela-chat-system-bg);
+    border-left: 3px solid #ffc107;
+}
+
+.jela-chat-message-text a {
+    color: var(--jela-chat-primary-blue);
+    text-decoration: underline;
+}
+
+/* ========================================
+   INDICADOR DE ESCRITURA
+   ======================================== */
+
+.jela-chat-typing-indicator {
+    animation: jela-chat-fade-in 0.3s ease;
+}
+
+.jela-chat-typing-dots {
+    background: var(--jela-chat-bot-bg);
+    padding: 10px 14px;
+    border-radius: 12px;
+    display: inline-flex;
+    gap: 4px;
+}
+
+.jela-chat-typing-dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--jela-chat-text-muted);
+    border-radius: 50%;
+    animation: jela-chat-typing 1.4s infinite;
+}
+
+.jela-chat-typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.jela-chat-typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes jela-chat-typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   FOOTER - FORMULARIO
+   ======================================== */
+
+.jela-chat-footer {
+    border-top: 1px solid var(--jela-chat-border);
+    padding: 16px;
+    background: var(--jela-chat-bg-white);
+    flex-shrink: 0;
+}
+
+.jela-chat-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.jela-chat-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jela-chat-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--jela-chat-border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.jela-chat-input:focus {
+    outline: none;
+    border-color: var(--jela-chat-primary-blue);
+}
+
+.jela-chat-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.jela-chat-textarea {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--jela-chat-border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    min-height: 40px;
+    max-height: 120px;
+    transition: border-color 0.2s ease;
+}
+
+.jela-chat-textarea:focus {
+    outline: none;
+    border-color: var(--jela-chat-primary-blue);
+}
+
+.jela-chat-send {
+    width: 40px;
+    height: 40px;
+    background: var(--jela-chat-primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.jela-chat-send:hover:not(:disabled) {
+    background: var(--jela-chat-primary-dark);
+    transform: scale(1.05);
+}
+
+.jela-chat-send:disabled,
+.jela-chat-send-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.jela-chat-branding {
+    text-align: center;
+    font-size: 11px;
+    color: var(--jela-chat-text-muted);
+    margin-top: 8px;
+}
+
+.jela-chat-branding strong {
+    color: var(--jela-chat-primary-blue);
+}
+
+/* ========================================
+   TEMAS
+   ======================================== */
+
+/* Tema Verde */
+.jela-chat-theme-green .jela-chat-button,
+.jela-chat-theme-green .jela-chat-header,
+.jela-chat-theme-green .jela-chat-send {
+    background: var(--jela-chat-primary-green);
+}
+
+.jela-chat-theme-green .jela-chat-send:hover:not(:disabled) {
+    background: #218838;
+}
+
+.jela-chat-theme-green .jela-chat-message-user .jela-chat-message-avatar {
+    background: var(--jela-chat-primary-green);
+}
+
+.jela-chat-theme-green .jela-chat-message-bot .jela-chat-message-avatar {
+    color: var(--jela-chat-primary-green);
+}
+
+.jela-chat-theme-green .jela-chat-welcome i {
+    color: var(--jela-chat-primary-green);
+}
+
+.jela-chat-theme-green .jela-chat-branding strong {
+    color: var(--jela-chat-primary-green);
+}
+
+/* Tema Morado */
+.jela-chat-theme-purple .jela-chat-button,
+.jela-chat-theme-purple .jela-chat-header,
+.jela-chat-theme-purple .jela-chat-send {
+    background: var(--jela-chat-primary-purple);
+}
+
+.jela-chat-theme-purple .jela-chat-send:hover:not(:disabled) {
+    background: #5a32a3;
+}
+
+.jela-chat-theme-purple .jela-chat-message-user .jela-chat-message-avatar {
+    background: var(--jela-chat-primary-purple);
+}
+
+.jela-chat-theme-purple .jela-chat-message-bot .jela-chat-message-avatar {
+    color: var(--jela-chat-primary-purple);
+}
+
+.jela-chat-theme-purple .jela-chat-welcome i {
+    color: var(--jela-chat-primary-purple);
+}
+
+.jela-chat-theme-purple .jela-chat-branding strong {
+    color: var(--jela-chat-primary-purple);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .jela-chat-widget {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .jela-chat-window {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 80px);
+        max-height: calc(100vh - 80px);
+        bottom: 70px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .jela-chat-button {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .jela-chat-button i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jela-chat-window {
+        border-radius: 0;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .jela-chat-header {
+        border-radius: 0;
+    }
+}
+
+/* ========================================
+   ACCESIBILIDAD
+   ======================================== */
+
+.jela-chat-button:focus,
+.jela-chat-send:focus,
+.jela-chat-input:focus,
+.jela-chat-textarea:focus {
+    outline: 2px solid var(--jela-chat-primary-blue);
+    outline-offset: 2px;
+}
+
+/* Modo de alto contraste */
+@media (prefers-contrast: high) {
+    .jela-chat-message-text {
+        border: 1px solid var(--jela-chat-border);
+    }
+}
+
+/* Reducir movimiento para usuarios con preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .jela-chat-window,
+    .jela-chat-message,
+    .jela-chat-typing-indicator {
+        animation: none;
+    }
+    
+    .jela-chat-button:hover {
+        transform: none;
+    }
+}

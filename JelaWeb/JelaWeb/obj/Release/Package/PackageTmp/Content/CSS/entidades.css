@@ -1,0 +1,74 @@
+/* Reset y estructura base */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+form {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de la barra de herramientas personalizada */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    font-size:12px;
+    gap: 10px;
+    padding: 5px 5px;
+    background-color: #E4EFFA;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/* Contenedor principal tipo MDI */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Barra de estado */
+.status-bar {
+    flex: 0 0 30px;
+    background-color: #007ACC;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 14px;
+    z-index: 999;
+}
+
+/* Formulario modal */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-actions {
+    margin-left:720px;
+    margin-top: 40px;
+    text-align: right;
+}
+
+/* Popup DevExpress */
+.dxpPopupControl_Content {
+    padding: 2px;
+}
+
+/* Ajustes para íconos Font Awesome */
+.fa {
+    font-size: 16px;
+    margin-right: 6px;
+}

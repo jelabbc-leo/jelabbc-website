@@ -1,0 +1,28 @@
+/* ============================================================================
+   Módulo: Conceptos
+   Archivo: conceptos.css
+   ============================================================================ */
+
+/* Fondo estándar del sistema */
+body, .container-fluid {
+    background: #E4EFFA;
+    min-height: 100vh;
+}
+
+/* Grid específico para conceptos */
+#grdCatConceptos {
+    margin-top: 20px;
+}
+
+/* Estilos para el popup de edición */
+.conceptos-edit-popup .dxpc-content {
+    background: #ffffff;
+}
+
+/* Footer del popup */
+.conceptos-popup-footer {
+    text-align: right;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #dee2e6;
+}

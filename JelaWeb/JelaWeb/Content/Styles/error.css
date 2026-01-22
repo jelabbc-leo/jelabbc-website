@@ -1,0 +1,62 @@
+/* Estilos base para la página de error dinámica */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--error-bg-gradient, linear-gradient(135deg, #fa709a 0%, #fee140 100%));
+}
+
+.error-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 600px;
+}
+
+.error-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: var(--error-icon-color, #fa709a);
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+    color: var(--error-code-color, #fa709a);
+}
+
+.error-message {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.error-description {
+    color: #666;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+    background: var(--error-btn-color, #fa709a);
+}
+
+.btn-action:hover {
+    background: var(--error-btn-hover, #e85a8a);
+}
+

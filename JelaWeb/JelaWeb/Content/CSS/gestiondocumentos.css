@@ -1,0 +1,138 @@
+/* Estilos para la página de Gestión de Documentos */
+.documentos-container {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.documentos-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.documentos-header h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.documentos-header h1 i {
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.documentos-subtitle {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.documentos-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.documentos-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    min-height: 280px;
+}
+
+.documentos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #28a745;
+}
+
+.documentos-card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.documentos-card-icon i {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.documentos-card-content {
+    flex: 1;
+    width: 100%;
+}
+
+.documentos-card-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.documentos-card-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.documentos-card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.documentos-card-arrow i {
+    color: #28a745;
+    font-size: 16px;
+}
+
+.documentos-card:hover .documentos-card-arrow {
+    background: #28a745;
+    transform: translateX(5px);
+}
+
+.documentos-card:hover .documentos-card-arrow i {
+    color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .documentos-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .documentos-container {
+        padding: 20px;
+    }
+
+    .documentos-header h1 {
+        font-size: 24px;
+    }
+}

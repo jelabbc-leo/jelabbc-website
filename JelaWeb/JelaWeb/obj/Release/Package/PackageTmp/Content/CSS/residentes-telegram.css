@@ -1,0 +1,108 @@
+/* ============================================================================
+   Módulo: Residentes Telegram
+   Archivo: residentes-telegram.css
+   ============================================================================ */
+
+/* Contenedor principal */
+.container-fluid {
+    padding: 15px;
+}
+
+/* Tabs */
+.dxpc-content {
+    padding: 10px;
+}
+
+/* Popup footer */
+.popup-footer {
+    text-align: right;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+.popup-footer .dxbButton {
+    margin-left: 10px;
+}
+
+/* Estados de residentes */
+.status-activo {
+    background-color: #28a745;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.status-bloqueado {
+    background-color: #dc3545;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.status-suspendido {
+    background-color: #ffc107;
+    color: #212529;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+/* Tipos de residentes */
+.tipo-standard {
+    background-color: #6c757d;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.tipo-premium {
+    background-color: #007bff;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.tipo-trial {
+    background-color: #17a2b8;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+/* Grid ajustes */
+.dxgvControl {
+    margin-top: 10px;
+}
+
+/* Toolbar del grid */
+.dxgvToolbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Formulario en popup */
+.dxflFormLayout {
+    padding: 10px;
+}
+
+/* Campos requeridos */
+.dxeRequiredMark {
+    color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .popup-footer {
+        text-align: center;
+    }
+    
+    .popup-footer .dxbButton {
+        margin: 5px;
+    }
+}

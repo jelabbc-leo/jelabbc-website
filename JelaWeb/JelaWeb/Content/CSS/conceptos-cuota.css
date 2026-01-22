@@ -1,0 +1,54 @@
+/* ============================================================================
+   Módulo: Conceptos de Cuota
+   Archivo: conceptos-cuota.css
+   ============================================================================ */
+
+/* Fondo estándar del sistema */
+body, .container-fluid {
+    background: #E4EFFA;
+    min-height: 100vh;
+}
+
+.container-fluid {
+    padding: 15px;
+}
+
+#formFiltros {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#gridConceptos {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.popup-footer .dxb {
+    margin-left: 5px;
+}
+
+.dxpc-content {
+    padding: 15px;
+}
+
+.dxflGroupCaption {
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.dxflRequiredMark {
+    color: #c00;
+    font-weight: bold;
+}

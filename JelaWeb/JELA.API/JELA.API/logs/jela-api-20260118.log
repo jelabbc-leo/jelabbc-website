@@ -1,0 +1,39 @@
+2026-01-18 18:25:09.053 -06:00 [INF] Iniciando JELA.API...
+2026-01-18 18:25:09.337 -06:00 [INF] JELA.API iniciado correctamente en 
+2026-01-18 18:25:09.341 -06:00 [DBG] Hosting starting
+2026-01-18 18:25:09.370 -06:00 [INF] User profile is available. Using 'C:\Users\jlsgg\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-18 18:25:09.374 -06:00 [DBG] Reading data from file 'C:\Users\jlsgg\AppData\Local\ASP.NET\DataProtection-Keys\key-742db8a3-9050-4117-9cc0-0c2b98979d46.xml'.
+2026-01-18 18:25:09.396 -06:00 [DBG] Found key {742db8a3-9050-4117-9cc0-0c2b98979d46}.
+2026-01-18 18:25:09.408 -06:00 [DBG] Considering key {742db8a3-9050-4117-9cc0-0c2b98979d46} with expiration date 2026-03-11 19:27:08Z as default key.
+2026-01-18 18:25:09.422 -06:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-18 18:25:09.424 -06:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-01-18 18:25:09.426 -06:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-18 18:25:09.429 -06:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-01-18 18:25:09.431 -06:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-01-18 18:25:09.432 -06:00 [DBG] Using key {742db8a3-9050-4117-9cc0-0c2b98979d46} as the default key.
+2026-01-18 18:25:09.434 -06:00 [DBG] Key ring with default key {742db8a3-9050-4117-9cc0-0c2b98979d46} was loaded during application startup.
+2026-01-18 18:25:09.597 -06:00 [INF] Now listening on: http://localhost:5263
+2026-01-18 18:25:09.598 -06:00 [DBG] Loaded hosting startup assembly JELA.API
+2026-01-18 18:25:09.599 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-18 18:25:09.599 -06:00 [INF] Hosting environment: Development
+2026-01-18 18:25:09.600 -06:00 [INF] Content root path: D:\DesarrolloWEB\JelaAzure\JelaWeb\JELA.API\JELA.API
+2026-01-18 18:25:09.601 -06:00 [DBG] Hosting started
+2026-01-18 18:25:34.212 -06:00 [DBG] Connection id "0HNIMU51DRABR" accepted.
+2026-01-18 18:25:34.213 -06:00 [DBG] Connection id "0HNIMU51DRABR" started.
+2026-01-18 18:25:34.234 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5263/health/live - null null
+2026-01-18 18:25:34.237 -06:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-01-18 18:25:34.266 -06:00 [DBG] 1 candidate(s) found for the request path '/health/live'
+2026-01-18 18:25:34.279 -06:00 [DBG] Request matched endpoint 'Health checks'
+2026-01-18 18:25:34.282 -06:00 [INF] [21a60807] GET /health/live - Started
+2026-01-18 18:25:34.296 -06:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-18 18:25:34.312 -06:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-18 18:25:34.314 -06:00 [INF] Executing endpoint 'Health checks'
+2026-01-18 18:25:34.316 -06:00 [DBG] Running health checks
+2026-01-18 18:25:34.319 -06:00 [DBG] Health check processing with combined status "Healthy" completed after 2.0868ms
+2026-01-18 18:25:34.323 -06:00 [INF] Executed endpoint 'Health checks'
+2026-01-18 18:25:34.325 -06:00 [INF] [21a60807] GET /health/live - 200 in 43ms
+2026-01-18 18:25:34.327 -06:00 [DBG] Connection id "0HNIMU51DRABR" completed keep alive response.
+2026-01-18 18:25:34.328 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5263/health/live - 200 null text/plain 95.5126ms
+2026-01-18 18:27:45.572 -06:00 [DBG] Connection id "0HNIMU51DRABR" disconnecting.
+2026-01-18 18:27:45.574 -06:00 [DBG] Connection id "0HNIMU51DRABR" stopped.
+2026-01-18 18:27:45.574 -06:00 [DBG] Connection id "0HNIMU51DRABR" sending FIN because: "The Socket transport's send loop completed gracefully."

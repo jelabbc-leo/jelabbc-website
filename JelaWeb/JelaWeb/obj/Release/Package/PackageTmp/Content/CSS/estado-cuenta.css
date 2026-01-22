@@ -1,0 +1,38 @@
+/* ========================================================================
+   ESTILOS PARA PÁGINA DE ESTADO DE CUENTA
+   ======================================================================== */
+
+.container-fluid {
+    padding: 15px;
+}
+
+/* Resumen */
+.form-resumen {
+    margin-bottom: 20px;
+}
+
+.form-resumen .dxASPxLabel {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Grid */
+.dx-command-column {
+    width: 60px !important;
+}
+
+/* Montos */
+.monto-positivo {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.monto-negativo {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.monto-neutro {
+    color: #6c757d;
+    font-weight: bold;
+}

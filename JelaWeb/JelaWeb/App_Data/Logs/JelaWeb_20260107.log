@@ -1,0 +1,521 @@
+2026-01-07 10:02:34 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:02:34 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: vpwgt11g54mkbucvurqn21uw
+2026-01-07 10:05:22 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:05:22 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: gofhu0cwobabxdcdpxml5cuk
+2026-01-07 10:05:31 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:05:31 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:05:31 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:05:31 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:05:31 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:05:31 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:05:34 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:06:54 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:06:54 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: fabt2s3fihtqhw0x4dmf0e1n
+2026-01-07 10:07:00 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:07:00 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:07:00 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:07:00 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:07:00 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:07:00 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:07:02 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:07:09 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:08:05 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:08:05 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: ijsccuzaer5qws4kmke4zr3j
+2026-01-07 10:08:10 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:08:10 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:08:10 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:08:10 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:08:10 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:08:10 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:08:12 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:08:19 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:08:20 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:08:20 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:08:20 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:08:20 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:08:24 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:11:06 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:11:06 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:11:06 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:11:06 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:11:06 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:16:04 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:16:05 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: ctuo1c0g2rfekrxgid0x3vxk
+2026-01-07 10:16:14 [WARNING] [Usuario: ::1] Intento de login fallido para usuario: admin - credenciales_invalidas
+2026-01-07 10:16:21 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:16:21 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:16:21 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:16:21 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:16:21 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:16:21 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:16:24 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:16:34 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:16:34 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:16:35 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:16:35 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:16:35 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:16:38 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:16:44 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:16:44 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:16:44 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:16:44 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:16:44 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:16:46 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:22:54 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:22:55 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: nxosgoz2tkcwjgwymlom2ifl
+2026-01-07 10:23:10 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:23:10 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:23:10 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:23:10 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:23:10 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:23:10 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:23:13 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:24:14 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:24:14 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:24:14 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:24:15 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:24:15 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:24:17 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:27:21 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:27:22 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xmjm0nkj5243gouhrwjimkvg
+2026-01-07 10:27:27 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:27:27 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:27:27 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:27:27 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:27:27 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:27:27 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:27:30 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:27:37 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:27:37 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:27:37 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:27:37 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:27:37 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:27:40 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:28:09 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:28:09 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:28:09 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:28:10 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:28:10 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:28:12 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:34:10 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 10:40:39 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 10:40:40 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: qdruzspksy53xkunxp3b1nbh
+2026-01-07 10:43:06 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 10:43:06 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 10:43:06 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 10:43:06 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 10:43:06 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 10:43:06 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 10:43:09 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:43:19 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 10:43:19 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 10:43:19 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 10:43:20 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 10:43:20 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 10:43:22 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 15:21:02 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 15:21:03 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: uwckdrmxg2tjuhcw1w0e3jgr
+2026-01-07 15:21:11 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 15:21:11 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 15:21:11 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 18
+2026-01-07 15:21:11 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 18
+2026-01-07 15:21:11 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 15:21:11 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 15:21:14 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 15:21:22 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 15:21:22 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 15:21:22 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 15:21:22 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 15:21:22 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 15:21:25 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 15:29:53 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 15:29:53 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: mvxng1hhidown4wxgb1yqxsm
+2026-01-07 15:29:59 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 15:29:59 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 15:29:59 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-07 15:29:59 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-07 15:29:59 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 15:29:59 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 15:30:01 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 15:30:12 [ERROR] [Usuario: Anónimo] Error no controlado en la aplicación
+Exception: HttpParseException
+Message: El contenido ('<!-- Columnas generadas dinámicamente desde el API -->') no coincide con ninguna de las propiedades dentro de 'DevExpress.Web.ASPxGridView', asegúrese de que está bien formado.
+Stack Trace:    en System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   en System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   en System.Web.UI.TemplateParser.ParseInternal()
+   en System.Web.UI.TemplateParser.Parse()
+   en System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   en System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   en System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   en System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+Inner Exception: El contenido ('<!-- Columnas generadas dinámicamente desde el API -->') no coincide con ninguna de las propiedades dentro de 'DevExpress.Web.ASPxGridView', asegúrese de que está bien formado.
+2026-01-07 15:30:12 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Operacion/Condominios/Reservaciones.aspx
+2026-01-07 15:30:15 [ERROR] [Usuario: Administrador General] Error en página /Views/Operacion/Condominios/CalendarioReservaciones.aspx
+Exception: HttpException
+Message: No se puede encontrar 'scripts' de ContentPlaceHolder en la página maestra '/MasterPages/Jela.Master', compruebe el atributo ContentPlaceHolderID del control de contenido en la página de contenido.
+Stack Trace:    en System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   en System.Web.UI.Page.get_Master()
+   en System.Web.UI.Page.ApplyMasterPage()
+   en System.Web.UI.Page.PerformPreInit()
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+2026-01-07 15:30:15 [ERROR] [Usuario: Administrador General] Error no controlado en la aplicación
+Exception: HttpUnhandledException
+Message: Se produjo una excepción de tipo 'System.Web.HttpUnhandledException'.
+Stack Trace:    en System.Web.UI.Page.HandleError(Exception e)
+   en System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   en System.Web.UI.Page.ProcessRequest()
+   en System.Web.UI.Page.ProcessRequest(HttpContext context)
+   en ASP.views_operacion_condominios_calendarioreservaciones_aspx.ProcessRequest(HttpContext context)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+Inner Exception: No se puede encontrar 'scripts' de ContentPlaceHolder en la página maestra '/MasterPages/Jela.Master', compruebe el atributo ContentPlaceHolderID del control de contenido en la página de contenido.
+2026-01-07 17:01:33 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 17:01:34 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: bs0zs0efozb3mnjbx3sjhhcw
+2026-01-07 17:01:43 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 17:01:43 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 17:01:43 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-07 17:01:43 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-07 17:01:43 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 17:01:43 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 17:01:46 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:01:56 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 17:01:56 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 17:01:56 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 17:01:57 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 17:01:57 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:04:40 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:06:36 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 17:06:36 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 17:06:36 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 17:06:36 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 17:06:36 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:06:43 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:07:45 [INFO] Unidades.CargarCombos: DataTable obtenido. Es Nothing: False, Rows.Count: 4
+2026-01-07 17:07:45 [INFO] Unidades.CargarCombos: 4 entidades cargadas en combo
+2026-01-07 17:07:45 [ERROR] Error en ObtenerDatos: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Exception: Exception
+Message: Error al consumir la API: Error al ejecutar la consulta: Unknown column 'c.Activo' in 'on clause' (HTTP 500)
+Stack Trace:    en JelaWeb.ApiConsumer.ObtenerDatos(String url) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Services\API\ApiConsumer.vb:línea 69
+2026-01-07 17:07:45 [INFO] Unidades.CargarDatos: 0 unidades cargadas
+2026-01-07 17:07:45 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:07:54 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 17:35:24 [INFO] Unidades.ObtenerEntidades: Se encontraron 4 entidades
+2026-01-07 17:39:58 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:40:35 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 17:40:36 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: nqmskbwlpb3u5n4jk5dnrz11
+2026-01-07 17:40:43 [WARNING] [Usuario: ::1] Intento de login fallido para usuario: admin - credenciales_invalidas
+2026-01-07 17:40:48 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 17:40:48 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 17:40:48 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-07 17:40:48 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-07 17:40:48 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 17:40:48 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 17:40:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:42:49 [ERROR] [Usuario: Anónimo] Error no controlado en la aplicación
+Exception: HttpParseException
+Message: El contenido ('<!-- Columnas generadas dinámicamente desde el API -->') no coincide con ninguna de las propiedades dentro de 'DevExpress.Web.ASPxGridView', asegúrese de que está bien formado.
+Stack Trace:    en System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   en System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   en System.Web.UI.TemplateParser.ParseInternal()
+   en System.Web.UI.TemplateParser.Parse()
+   en System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   en System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   en System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   en System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   en System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   en System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   en System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+Inner Exception: El contenido ('<!-- Columnas generadas dinámicamente desde el API -->') no coincide con ninguna de las propiedades dentro de 'DevExpress.Web.ASPxGridView', asegúrese de que está bien formado.
+2026-01-07 17:42:49 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Operacion/Condominios/Visitantes.aspx
+2026-01-07 17:58:22 [INFO] Aplicación JELA iniciada correctamente
+2026-01-07 17:58:22 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: z3sfesnzhmyht3hobxgpjbib
+2026-01-07 17:58:31 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 1, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 1 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-07 17:58:31 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+1+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-07 17:58:31 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 25
+2026-01-07 17:58:31 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 25
+2026-01-07 17:58:31 [INFO] [Usuario: admin] Login exitoso para usuario: admin (ID: 1, Nombre: Administrador General, Entidad: 1)
+2026-01-07 17:58:31 [ERROR] Error durante el proceso de login
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en JelaWeb.Ingreso.btnLogin_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\Views\Auth\Ingreso.aspx.vb:línea 93
+2026-01-07 17:58:33 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:58:46 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:59:05 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:59:17 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:59:46 [INFO] [Usuario: Administrador General] Cambiando idioma a: en-US
+2026-01-07 17:59:46 [ERROR] Error al cargar scripts y estilos en Master Page: The Controls collection cannot be modified because the control contains code blocks (i.e. <% ... %>).
+Exception: HttpException
+Message: The Controls collection cannot be modified because the control contains code blocks (i.e. <% ... %>).
+Stack Trace:    at System.Web.UI.ControlCollection.Add(Control child)
+   at JelaWeb.Jela.LoadScriptsAndStyles() in D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:line 342
+2026-01-07 17:59:46 [ERROR] Error al cargar scripts y estilos en Master Page: The Controls collection cannot be modified because the control contains code blocks (i.e. <% ... %>).
+Exception: HttpException
+Message: The Controls collection cannot be modified because the control contains code blocks (i.e. <% ... %>).
+Stack Trace:    at System.Web.UI.ControlCollection.Add(Control child)
+   at JelaWeb.Jela.LoadScriptsAndStyles() in D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:line 342
+2026-01-07 17:59:53 [INFO] [Usuario: Administrador General] Cambiando idioma a: es-MX
+2026-01-07 17:59:53 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 17:59:54 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 342
+2026-01-07 18:09:57 [INFO] [Usuario: Administrador General] Usuario cerrando sesión: Administrador General
+2026-01-07 18:09:57 [ERROR] Error al cerrar sesión
+Exception: ThreadAbortException
+Message: Subproceso anulado.
+Stack Trace:    en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en JelaWeb.Jela.btnCerrarSesion_Click(Object sender, EventArgs e) en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 274
+2026-01-07 18:09:57 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: z3sfesnzhmyht3hobxgpjbib
+2026-01-07 18:09:57 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: z3sfesnzhmyht3hobxgpjbib
+2026-01-07 18:40:01 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: z3sfesnzhmyht3hobxgpjbib

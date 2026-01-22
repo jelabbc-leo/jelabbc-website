@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ConexionMySQL-Web.config Connection String" description="ConexionMySQL Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Server=jela.mysql.database.azure.com;Database=prueba;Uid=jlsg;Pwd=Jela@2025;SslMode=Required;SslCa={D:\===Desarrollo===\===JELA===\Docs\DigiCertGlobalRootG2.crt.pem}" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\===Desarrollo===\\===WMS===\\WebService\\WebApplication1\\WebApplication1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConexionMySQL']/@connectionString" />
+  </parameter>
+</parameters>

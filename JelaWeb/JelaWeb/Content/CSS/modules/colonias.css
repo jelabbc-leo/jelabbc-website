@@ -1,0 +1,71 @@
+/* Estilos para el módulo de Colonias */
+/* Fondo estándar del sistema */
+.colonias-wrapper {
+    min-height: 100vh;
+    background: #E4EFFA;
+    padding: 20px;
+}
+
+/* Contenedor del grid */
+.colonias-grid-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Panel de filtros */
+.colonias-filter-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el popup */
+.colonias-popup .dxpc-content {
+    background: #E4EFFA;
+}
+
+/* Footer del popup */
+.colonias-popup-footer {
+    text-align: right;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #dee2e6;
+}
+
+.colonias-popup-footer .dxbButton {
+    margin-left: 10px;
+}
+
+/* Estados y badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.875em;
+}
+
+.status-activo {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-inactivo {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .colonias-wrapper {
+        padding: 10px;
+    }
+
+    .colonias-grid-container {
+        padding: 10px;
+    }
+}

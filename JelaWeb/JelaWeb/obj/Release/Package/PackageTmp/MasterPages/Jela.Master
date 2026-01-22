@@ -1,0 +1,398 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Jela.master.vb" Inherits="JelaWeb.Jela" %>
+<%@ Register Assembly="DevExpress.Web.v22.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <title>JELA App</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap 5 (requerido por DevExpress Bootstrap) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts y estilos se cargan desde el code-behind -->
+
+    <!-- Toastr Stub - Debe cargarse ANTES de cualquier otro script que lo use -->
+    <script type="text/javascript">
+        // Protección inmediata - ejecutar antes de cualquier otro código
+        if (typeof window.toastr === 'undefined') {
+            window.toastr = {
+                success: function(msg) { console.log('[SUCCESS]', msg); },
+                error: function(msg) { console.error('[ERROR]', msg); alert('Error: ' + msg); },
+                warning: function(msg) { console.warn('[WARNING]', msg); },
+                info: function(msg) { console.info('[INFO]', msg); }
+            };
+        }
+        // Función helper global
+        if (typeof window.showToast === 'undefined') {
+            window.showToast = function(type, message) {
+                try {
+                    if (typeof toastr !== 'undefined' && toastr && typeof toastr[type] === 'function') {
+                        toastr[type](message);
+                    } else {
+                        console.log('[' + type.toUpperCase() + '] ' + message);
+                        if (type === 'error') {
+                            alert('Error: ' + message);
+                        }
+                    }
+                } catch (e) {
+                    console.error('Error en showToast:', e);
+                    alert('Error: ' + message);
+                }
+            };
+        }
+    </script>
+
+    <!-- ContentPlaceHolder para contenido adicional en el head -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Script para detectar si estamos en un iframe y ocultar Ribbon/pestañas -->
+    <!-- SCRIPT ELIMINADO - Ya no se usa sistema MDI -->
+
+    <!-- Scripts compartidos - Se carga al final del body para asegurar que el ClientID esté disponible -->
+
+    <!-- JELA Chat Widget - CSS -->
+    <link rel="stylesheet" href="/Content/CSS/chat-widget.css" />
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <dx:ASPxRibbon ID="ribbonControl" runat="server" Width="100%" Theme="Office2010Blue" ClientInstanceName="ribbonControl"
+            ShowFileTab="True" FileTabText="Inicio">
+            <ClientSideEvents FileTabClicked="function(s, e) { window.location.href = '/Views/Inicio.aspx'; }" />
+      <%--      <Tabs>
+                <dx:RibbonTab Name="Operación" Text="Operación">
+                    <Groups>
+                        <dx:RibbonGroup Text="Tareas" Name="gpoTareas">
+                            <Items>
+                                <dx:RibbonButtonItem Name="btnCaptura" Text="Captura de Documentos" Size="Large" BeginGroup="True" NavigateUrl="~/Views/Operacion/CapturaDocumentos.aspx">
+                                    <LargeImage Url="~/Content/Images/Iconos/Tareas.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                            </Items>
+                        </dx:RibbonGroup>
+                    </Groups>
+                </dx:RibbonTab>
+
+                <dx:RibbonTab Name="tabCatalogos" Text="Catálogos">
+                    <Groups>
+                        <dx:RibbonGroup Name="Grupos" Text="Grupos">
+                            <Items>
+                                <dx:RibbonButtonItem Name="btnEntidades" NavigateUrl="~/Views/Catalogos/Entidades.aspx" Size="Large" Text="Entidades">
+                                    <LargeImage Url="~/Content/Images/Iconos/Entidad.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                                <dx:RibbonButtonItem Name="btnSubEntidad" Size="Large" Text="Sub Entidades">
+                                    <LargeImage Url="~/Content/Images/Iconos/SubEntidad.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                                <dx:RibbonButtonItem Name="btnPrestadores" Size="Large" Text="Prestadores Servicios">
+                                    <LargeImage Url="~/Content/Images/Iconos/colaboradores.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                            </Items>
+                        </dx:RibbonGroup>
+
+                        <dx:RibbonGroup Name="Datos" Text="Datos">
+                            <Items>
+                                <dx:RibbonButtonItem Name="btnTiposDoc" Size="Large" Text="Tipos de Documento">
+                                    <LargeImage Url="~/Content/Images/Iconos/Tareas.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                                <dx:RibbonButtonItem Name="btnColonias" Size="Large" Text="Colonias">
+                                    <LargeImage Url="~/Content/Images/Iconos/Colonia.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                                <dx:RibbonButtonItem Name="btnServicios" Size="Large" Text="Productos , Servicios, Conceptos" NavigateUrl="~/Views/Catalogos/Conceptos.aspx">
+                                    <LargeImage Url="~/Content/Images/Iconos/servicios.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                            </Items>
+                        </dx:RibbonGroup>
+
+                    </Groups>
+                </dx:RibbonTab>
+
+                <dx:RibbonTab Name="tabConsultas" Text="Consultas">
+                </dx:RibbonTab>
+
+                <dx:RibbonTab Name="tabConfig" Text="Configuración">
+                    <Groups>
+                        <dx:RibbonGroup Name="Sistema" Text="Sistema">
+                            <Items>
+                                <dx:RibbonButtonItem Name="btnUsuarios" Size="Large" Text="Usuarios">
+                                    <LargeImage Url="~/Content/Images/Iconos/empleado.png">
+                                    </LargeImage>
+                                </dx:RibbonButtonItem>
+                            </Items>
+                        </dx:RibbonGroup>
+                    </Groups>
+                </dx:RibbonTab>
+
+            </Tabs>--%>
+
+        </dx:ASPxRibbon>
+
+        <!-- Logotipo fuera del Ribbon -->
+        <div class="ribbon-logo-overlay">
+            <img src="/Content/Images/LogoJelaBBC.png" alt="JELA Logo" style="width:80px "/>
+        </div>
+
+
+        <!-- Zona de trabajo - ContentPlaceHolder directo sin pestañas -->
+        <div class="mdi-workspace">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Barra de Estado -->
+        <div class="status-bar" id="statusBar" runat="server">
+            <div class="status-bar-panel">
+                <i class="fas fa-file-alt"></i>
+                <span class="status-label">Página:</span>
+                <asp:Label ID="lblPaginaActual" runat="server" CssClass="status-value" Text="-" />
+            </div>
+            <div class="status-separator"></div>
+            <div class="status-bar-panel" id="userPanel" runat="server" style="cursor: pointer;" onclick="showUserMenu();">
+                <i class="fas fa-user"></i>
+                <span class="status-label">Usuario:</span>
+                <asp:Label ID="lblUsuario" runat="server" CssClass="status-value" Text="-" />
+            </div>
+            <div class="status-separator"></div>
+            <div class="status-bar-panel">
+                <i class="fas fa-info-circle"></i>
+                <span class="status-label">Versión:</span>
+                <asp:Label ID="lblVersion" runat="server" CssClass="status-value" Text="-" />
+            </div>
+            <div class="status-separator"></div>
+            <div class="status-bar-panel">
+                <i class="fas fa-server"></i>
+                <span class="status-label">API:</span>
+                <asp:Label ID="lblApi" runat="server" CssClass="status-value" Text="-" />
+            </div>
+            <div class="status-separator"></div>
+            <div class="status-bar-panel status-bar-panel-right">
+                <i class="fas fa-globe"></i>
+                <dx:ASPxComboBox ID="cmbLanguage" runat="server" 
+                                 ClientInstanceName="cmbLanguageMaster"
+                                 Width="120px"
+                                 AutoPostBack="true"
+                                 EnableCallbackMode="false"
+                                 ValueType="System.String"
+                                 OnSelectedIndexChanged="cmbLanguage_SelectedIndexChanged">
+                    <Items>
+                        <dx:ListEditItem Text="Español" Value="es-MX" />
+                        <dx:ListEditItem Text="English" Value="en-US" />
+                    </Items>
+                </dx:ASPxComboBox>
+            </div>
+            
+            <!-- Panel de selector de entidades (solo para administradores) - DESPUÉS del idioma -->
+            <asp:Panel ID="pnlSeparadorEntidades" runat="server" Visible="false" CssClass="status-separator"></asp:Panel>
+            <asp:Panel ID="pnlSelectorEntidades" runat="server" Visible="false" CssClass="status-bar-panel status-bar-panel-right entidad-selector">
+                <i class="fas fa-building"></i>
+                <span class="status-label">Entidad:</span>
+                <dx:ASPxComboBox ID="ddlEntidades" runat="server" 
+                                 ClientInstanceName="ddlEntidadesMaster"
+                                 Width="200px"
+                                 AutoPostBack="true"
+                                 EnableCallbackMode="false"
+                                 ValueType="System.Int32"
+                                 OnSelectedIndexChanged="ddlEntidades_SelectedIndexChanged"
+                                 Theme="Office2010Blue">
+                </dx:ASPxComboBox>
+            </asp:Panel>
+        </div>
+
+        <!-- Popup de Menú de Usuario -->
+        <dx:ASPxPopupControl ID="popupUserMenu" runat="server" ClientInstanceName="popupUserMenu"
+            HeaderText="" Width="280px" ShowHeader="False"
+            Modal="False" CloseAction="None" CloseOnEscape="True"
+            ShowOnPageLoad="False" Theme="Office2010Blue"
+            ShowShadow="True" EnableAnimation="True">
+            <ClientSideEvents Shown="function(s, e) { 
+                // Agregar listener para cerrar al hacer clic fuera del popup
+                var userPanel = document.getElementById('<%= userPanel.ClientID %>');
+                setTimeout(function() {
+                    var clickHandler = function(event) {
+                        var popupElement = s.GetMainElement();
+                        if (popupElement && !popupElement.contains(event.target) && 
+                            userPanel && !userPanel.contains(event.target)) {
+                            popupUserMenu.Hide();
+                            document.removeEventListener('click', clickHandler);
+                        }
+                    };
+                    // Usar setTimeout para evitar que el clic que abrió el popup lo cierre inmediatamente
+                    setTimeout(function() {
+                        document.addEventListener('click', clickHandler);
+                    }, 100);
+                }, 50);
+            }" />
+            <ContentCollection>
+                <dx:PopupControlContentControl runat="server">
+                    <div class="user-menu-container">
+                        <div class="user-menu-header">
+                            <div class="user-menu-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-menu-info">
+                                <asp:Label ID="lblUsuarioMenu" runat="server" CssClass="user-menu-name" />
+                            </div>
+                        </div>
+                        <div class="user-menu-actions">
+                            <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar Sesión" 
+                                CssClass="btn-cerrar-sesion" 
+                                OnClick="btnCerrarSesion_Click" />
+                        </div>
+                    </div>
+                </dx:PopupControlContentControl>
+            </ContentCollection>
+        </dx:ASPxPopupControl>
+    </form>
+    
+    <!-- JELA Chat Widget - JavaScript -->
+    <script src="/Scripts/widgets/chat-widget.js"></script>
+    <script type="text/javascript">
+        // Inicializar el widget de chat cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener IdEntidad desde la propiedad del master page
+            var idEntidad = <%= IdEntidadActual %>;
+            
+            // Inicializar widget
+            JelaChatWidget.init({
+                apiUrl: JELA_API_BASE_URL, // Variable global definida en el master
+                idEntidad: idEntidad,
+                position: 'bottom-right',
+                theme: 'blue',
+                autoOpen: false,
+                showBranding: true
+            });
+            
+            console.log('[JELA Master] Chat Widget inicializado con IdEntidad:', idEntidad);
+        });
+    </script>
+    
+    <!-- Scripts compartidos - Cargar al final del body (se cargan desde code-behind) -->
+    <script type="text/javascript">
+        // ========================================
+        // FUNCIONES PARA HACER POPUPS Y SPLITTERS RESPONSIVOS
+        // ========================================
+        
+        // Ajustar popups a tamaño responsivo
+        function ajustarPopupsResponsivos() {
+            if (window.innerWidth <= 768) {
+                // En móviles, ajustar todos los popups
+                var popups = document.querySelectorAll('.dxpc-window');
+                popups.forEach(function(popup) {
+                    if (popup.style.display !== 'none') {
+                        var width = window.innerWidth <= 480 ? '100vw' : '95vw';
+                        popup.style.width = width;
+                        popup.style.maxWidth = width;
+                        popup.style.left = window.innerWidth <= 480 ? '0' : '2.5vw';
+                        popup.style.right = window.innerWidth <= 480 ? '0' : '2.5vw';
+                        
+                        if (window.innerWidth <= 480) {
+                            popup.style.height = '100vh';
+                            popup.style.maxHeight = '100vh';
+                            popup.style.top = '0';
+                            popup.style.bottom = '0';
+                        }
+                    }
+                });
+            }
+        }
+        
+        // Ajustar splitters a tamaño responsivo
+        function ajustarSplittersResponsivos() {
+            if (window.innerWidth <= 768) {
+                var splitters = document.querySelectorAll('.dxsplControl');
+                splitters.forEach(function(splitter) {
+                    // Forzar layout vertical en móviles
+                    var panes = splitter.querySelectorAll('.dxsplPane');
+                    panes.forEach(function(pane) {
+                        pane.style.width = '100%';
+                        pane.style.minWidth = '100%';
+                        pane.style.maxWidth = '100%';
+                    });
+                });
+            }
+        }
+        
+        // Ejecutar al cargar y al redimensionar
+        document.addEventListener('DOMContentLoaded', function() {
+            ajustarPopupsResponsivos();
+            ajustarSplittersResponsivos();
+        });
+        
+        window.addEventListener('resize', function() {
+            ajustarPopupsResponsivos();
+            ajustarSplittersResponsivos();
+        });
+        
+        // Interceptar eventos de popup de DevExpress
+        if (typeof ASPxClientPopupControl !== 'undefined') {
+            var originalShow = ASPxClientPopupControl.prototype.Show;
+            ASPxClientPopupControl.prototype.Show = function() {
+                originalShow.apply(this, arguments);
+                setTimeout(function() {
+                    ajustarPopupsResponsivos();
+                }, 100);
+            };
+        }
+        
+        // Configuración global de la API
+        var JELA_API_BASE_URL = '<% 
+            Dim apiUrl = ConfigurationManager.AppSettings("ApiBaseUrl")
+            If Not String.IsNullOrEmpty(apiUrl) Then
+                Dim idx = apiUrl.IndexOf("/api/")
+                If idx > 0 Then
+                    apiUrl = apiUrl.Substring(0, idx)
+                End If
+            Else
+                apiUrl = "https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net"
+            End If
+            Response.Write(apiUrl)
+        %>';
+        
+        // Función helper para obtener token JWT (se almacena en sesión o localStorage)
+        function getJwtToken() {
+            // El token se puede obtener desde una variable global o desde localStorage
+            // Por ahora, retornamos null y el backend manejará la autenticación
+            return null; // Se agregará automáticamente por ApiConsumer en el backend
+        }
+        
+        function showUserMenu() {
+            var userPanel = document.getElementById('<%= userPanel.ClientID %>');
+            if (userPanel && popupUserMenu) {
+                // Obtener posición del panel de usuario
+                var rect = userPanel.getBoundingClientRect();
+                var popupWidth = 280; // Ancho del popup
+                var popupHeight = popupUserMenu.GetHeight ? popupUserMenu.GetHeight() : 150; // Altura estimada
+                
+                // Calcular posición: arriba del panel, alineado a la derecha
+                var x = rect.right - popupWidth;
+                var y = rect.top - popupHeight - 2;
+                
+                // Asegurar que no se salga de la pantalla
+                if (x < 0) x = 5;
+                if (y < 0) y = rect.bottom + 2;
+                
+                // Mostrar el popup en la posición calculada
+                popupUserMenu.ShowAtPos(x, y);
+            } else {
+                // Fallback: mostrar normalmente
+                popupUserMenu.Show();
+            }
+        }
+    </script>
+</body>
+</html>
+

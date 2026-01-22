@@ -1,0 +1,47 @@
+{
+  "deviceInfo": {
+    "devEui": "A84041000181D7E8",
+    "deviceName": "Medidor-Addon-V2-001",
+    "applicationName": "Medidores-Agua-JELA"
+  },
+  "devAddr": "01234567",
+  "fPort": 10,
+  "time": "2025-12-09T13:15:30Z",
+  "dr": 3,
+  "frequency": 915200000,
+  "data": "000004D2001E15B20E040000",
+  "object": {
+    "volumenTotal": 1.234,
+    "caudalInstantaneo": 0.03,
+    "temperaturaAgua": 21,
+    "bateriaPorcentaje": 88.5,
+    "alarmas": {
+      "overflow": false,
+      "sabotage": false,
+      "leak": false,
+      "reverseFlow": false,
+      "extremeConditions": false,
+      "blocked": false,
+      "hardwareTemporal": false,
+      "hardwarePermanent": false,
+      "removed": false,
+      "localComm": false,
+      "underflow": false,
+      "lowBattery": false
+    },
+    "tieneAlarmas": false
+  },
+  "rxInfo": [
+    {
+      "gatewayId": "b827ebfffe123456",
+      "uplinkId": "a1b2c3d4-e5f6-4789-a012-3456789abcde",
+      "rssi": -87,
+      "snr": 9.5,
+      "time": "2025-12-09T13:15:30Z"
+    }
+  ],
+  "txInfo": {
+    "frequency": 915200000,
+    "dr": 3
+  }
+}

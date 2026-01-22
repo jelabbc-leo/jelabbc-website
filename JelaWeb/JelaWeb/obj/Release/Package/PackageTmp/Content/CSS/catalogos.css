@@ -1,0 +1,407 @@
+/* =====================================================
+   ESTILOS PARA CATÁLOGOS - ECOSISTEMA JELABBC
+   ===================================================== */
+
+/* Variables de colores */
+:root {
+    --primary-color: #0078D4;
+    --secondary-color: #106EBE;
+    --success-color: #107C10;
+    --danger-color: #D13438;
+    --warning-color: #FFB900;
+    --info-color: #00B7C3;
+    --light-gray: #F3F2F1;
+    --border-color: #EDEBE9;
+    --text-primary: #323130;
+    --text-secondary: #605E5C;
+}
+
+/* Contenedor principal */
+.catalogo-container {
+    padding: 20px;
+    background-color: #fff;
+    min-height: calc(100vh - 100px);
+}
+
+/* Header del catálogo */
+.catalogo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.catalogo-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.catalogo-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* Toolbar de acciones */
+.catalogo-toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.catalogo-toolbar .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: all 0.2s;
+}
+
+.catalogo-toolbar .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Filtros */
+.catalogo-filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+/* Grid personalizado */
+.catalogo-grid {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.catalogo-grid .dxgvHeader {
+    background-color: var(--light-gray);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.catalogo-grid .dxgvDataRow:hover {
+    background-color: #F8F8F8;
+    cursor: pointer;
+}
+
+.catalogo-grid .dxgvSelectedRow {
+    background-color: #E6F2FF !important;
+}
+
+/* Badges de estado */
+.badge-activo {
+    background-color: var(--success-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-inactivo {
+    background-color: var(--text-secondary);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Modal/Popup personalizado */
+.catalogo-popup .dxpc-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.catalogo-popup .dxpc-content {
+    padding: 20px;
+}
+
+/* Formulario */
+.catalogo-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-label.required::after {
+    content: " *";
+    color: var(--danger-color);
+}
+
+.form-help {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-save {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.btn-save:hover {
+    background-color: #0E6B0E;
+    border-color: #0E6B0E;
+}
+
+.btn-cancel {
+    background-color: white;
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+
+.btn-cancel:hover {
+    background-color: var(--light-gray);
+}
+
+/* Lista de permisos */
+.permisos-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.permiso-modulo {
+    margin-bottom: 20px;
+}
+
+.permiso-modulo-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.permiso-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.permiso-item:hover {
+    background-color: var(--light-gray);
+}
+
+.permiso-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.permiso-label {
+    font-size: 14px;
+    color: var(--text-primary);
+    cursor: pointer;
+    flex: 1;
+}
+
+.permiso-descripcion {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-left: 28px;
+}
+
+/* Iconos de acción en grid */
+.grid-action-icon {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.grid-action-icon.edit {
+    color: var(--primary-color);
+}
+
+.grid-action-icon.edit:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.grid-action-icon.delete {
+    color: var(--danger-color);
+}
+
+.grid-action-icon.delete:hover {
+    color: #A00000;
+    transform: scale(1.2);
+}
+
+/* Loading overlay */
+.catalogo-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.catalogo-loading .spinner {
+    border: 4px solid var(--light-gray);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mensajes de alerta */
+.alert-custom {
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-success {
+    background-color: #DFF6DD;
+    border-left: 4px solid var(--success-color);
+    color: #0E6B0E;
+}
+
+.alert-error {
+    background-color: #FDE7E9;
+    border-left: 4px solid var(--danger-color);
+    color: #A80000;
+}
+
+.alert-warning {
+    background-color: #FFF4CE;
+    border-left: 4px solid var(--warning-color);
+    color: #8A6D00;
+}
+
+.alert-info {
+    background-color: #E1F5FE;
+    border-left: 4px solid var(--info-color);
+    color: #006064;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .catalogo-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .catalogo-toolbar {
+        width: 100%;
+    }
+    
+    .catalogo-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .catalogo-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column-reverse;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}

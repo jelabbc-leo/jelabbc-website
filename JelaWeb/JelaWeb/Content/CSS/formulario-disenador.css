@@ -1,0 +1,599 @@
+/**
+ * Diseñador de Formularios - Estilos CSS
+ * Estilo Visual Studio con soporte para Grid de 12 columnas
+ */
+
+/* ========================================
+   HEADER
+   ======================================== */
+.designer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+    border-bottom: 1px solid #ccc;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-title i {
+    color: #4a90d9;
+    margin-right: 8px;
+}
+
+/* ========================================
+   DATOS DEL FORMULARIO
+   ======================================== */
+.form-data-panel {
+    padding: 10px 15px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+.designer-container {
+    display: flex;
+    height: calc(100vh - 220px);
+    min-height: 400px;
+}
+
+/* ========================================
+   PANEL TOOLBOX
+   ======================================== */
+.toolbox-panel {
+    width: 180px;
+    min-width: 180px;
+    background: #f0f0f0;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    background: linear-gradient(to bottom, #4a90d9, #3a7bc8);
+    color: white;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.panel-header i {
+    margin-right: 8px;
+}
+
+.toolbox-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.toolbox-item {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    cursor: grab;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.toolbox-item:hover {
+    background: #e8f4fc;
+    border-color: #4a90d9;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transform: translateX(3px);
+}
+
+.toolbox-item:active {
+    cursor: grabbing;
+}
+
+.toolbox-item i {
+    width: 22px;
+    color: #4a90d9;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.toolbox-item.dragging {
+    opacity: 0.4;
+}
+
+/* Separador en toolbox */
+.toolbox-separator {
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0;
+}
+
+/* Botones de acción en toolbox */
+.toolbox-item-action {
+    background: linear-gradient(to bottom, #f8f8f8, #eee);
+    border-color: #bbb;
+}
+
+.toolbox-item-action i {
+    color: #27ae60;
+}
+
+.toolbox-item-action:hover {
+    background: linear-gradient(to bottom, #e8f8ec, #d8f0dc);
+    border-color: #27ae60;
+}
+
+/* ========================================
+   PANEL DISEÑADOR
+   ======================================== */
+.designer-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.toolbar-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-toolbar {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-toolbar:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.btn-toolbar.btn-danger:hover {
+    background: #e74c3c;
+}
+
+.designer-canvas {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #fafafa;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.designer-canvas.drag-over {
+    background-color: #e3f2fd;
+}
+
+.designer-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #999;
+}
+
+.designer-placeholder i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.designer-placeholder p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ========================================
+   SISTEMA DE FILAS (GRID 12 COLUMNAS)
+   ======================================== */
+.designer-row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+    min-height: 60px;
+    background: rgba(255,255,255,0.5);
+    border: 2px dashed transparent;
+    border-radius: 6px;
+    padding: 5px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.designer-row:hover {
+    background: rgba(74,144,217,0.05);
+}
+
+.designer-row.drag-over-row {
+    border-color: #4a90d9;
+    background: rgba(74,144,217,0.1);
+}
+
+/* Zona de drop entre filas */
+.row-drop-zone {
+    height: 20px;
+    margin: -5px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.row-drop-zone::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    background: transparent;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.row-drop-zone.drag-over-zone::before {
+    background: #4a90d9;
+    box-shadow: 0 0 8px rgba(74,144,217,0.5);
+}
+
+/* Zona de drop al final para nueva fila */
+.new-row-drop-zone {
+    min-height: 80px;
+    border: 2px dashed #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.new-row-drop-zone:hover,
+.new-row-drop-zone.drag-over-zone {
+    border-color: #4a90d9;
+    background: rgba(74,144,217,0.1);
+    color: #4a90d9;
+}
+
+.new-row-drop-zone i {
+    margin-right: 8px;
+}
+
+/* ========================================
+   CAMPOS EN EL CANVAS (con anchos de grid)
+   ======================================== */
+.designer-field {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 3px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+/* Anchos basados en grid de 12 columnas */
+.designer-field[data-ancho="1"] { width: calc(8.333% - 6px); }
+.designer-field[data-ancho="2"] { width: calc(16.666% - 6px); }
+.designer-field[data-ancho="3"] { width: calc(25% - 6px); }
+.designer-field[data-ancho="4"] { width: calc(33.333% - 6px); }
+.designer-field[data-ancho="5"] { width: calc(41.666% - 6px); }
+.designer-field[data-ancho="6"] { width: calc(50% - 6px); }
+.designer-field[data-ancho="7"] { width: calc(58.333% - 6px); }
+.designer-field[data-ancho="8"] { width: calc(66.666% - 6px); }
+.designer-field[data-ancho="9"] { width: calc(75% - 6px); }
+.designer-field[data-ancho="10"] { width: calc(83.333% - 6px); }
+.designer-field[data-ancho="11"] { width: calc(91.666% - 6px); }
+.designer-field[data-ancho="12"] { width: calc(100% - 6px); }
+
+.designer-field:hover {
+    border-color: #4a90d9;
+    box-shadow: 0 4px 12px rgba(74,144,217,0.2);
+}
+
+.designer-field.selected {
+    border-color: #4a90d9;
+    background: #f0f7ff;
+    box-shadow: 0 0 0 4px rgba(74,144,217,0.15);
+}
+
+.designer-field.drag-over-field {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39,174,96,0.2);
+}
+
+/* Indicador de posición de drop horizontal */
+.designer-field.drop-left::before,
+.designer-field.drop-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #4a90d9;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+.designer-field.drop-left::before {
+    left: -5px;
+}
+
+.designer-field.drop-right::after {
+    right: -5px;
+}
+
+.field-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #4a90d9, #3a7bc8);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 10px;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.field-info {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.field-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.field-required {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.field-meta {
+    font-size: 11px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.field-delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designer-field:hover .field-delete {
+    opacity: 1;
+}
+
+.field-delete:hover {
+    background: #c0392b;
+}
+
+/* Handle para arrastrar campo */
+.field-drag-handle {
+    position: absolute;
+    left: -3px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 30px;
+    background: #4a90d9;
+    border-radius: 0 3px 3px 0;
+    cursor: grab;
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.designer-field:hover .field-drag-handle {
+    opacity: 1;
+}
+
+.field-drag-handle::before {
+    content: '⋮⋮';
+    color: white;
+    font-size: 8px;
+    letter-spacing: -2px;
+}
+
+/* ========================================
+   PANEL PROPIEDADES
+   ======================================== */
+.properties-panel {
+    width: 280px;
+    min-width: 280px;
+    background: #f8f8f8;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.properties-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.property-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #999;
+}
+
+.property-placeholder i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.property-row {
+    margin-bottom: 15px;
+}
+
+.property-row label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.prop-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.prop-input:focus {
+    border-color: #4a90d9;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74,144,217,0.1);
+}
+
+.checkbox-row label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Slider para ancho */
+.ancho-slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ancho-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+}
+
+.ancho-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4a90d9;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.ancho-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4a90d9;
+    cursor: pointer;
+    border: none;
+}
+
+.ancho-value {
+    min-width: 35px;
+    text-align: center;
+    font-weight: 600;
+    color: #4a90d9;
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes dropHighlight {
+    0% { background-color: #e3f2fd; transform: scale(1.02); }
+    100% { background-color: white; transform: scale(1); }
+}
+
+.designer-field.just-dropped {
+    animation: dropHighlight 0.4s ease;
+}
+
+@keyframes pulseIndicator {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.drop-indicator-active {
+    animation: pulseIndicator 0.5s ease infinite;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1200px) {
+    .designer-field[data-ancho="1"],
+    .designer-field[data-ancho="2"],
+    .designer-field[data-ancho="3"] {
+        width: calc(50% - 6px);
+    }
+}

@@ -1,0 +1,12 @@
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbprojResolveAssemblyReference.cache
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Resources.resources
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbproj.GenerateResource.Cache
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.xml
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\WebApplication1.dll.config
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\WebApplication1.xml
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\bin\System.Web.Http.xml
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\===Desarrollo===\===WMS===\WebService\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

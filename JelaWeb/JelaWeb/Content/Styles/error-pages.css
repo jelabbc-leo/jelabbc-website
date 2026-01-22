@@ -1,0 +1,140 @@
+/* Estilos comunes para páginas de error individuales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.error-container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 500px;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.error-message {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.error-description {
+    color: #666;
+    margin: 20px 0;
+}
+
+.error-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para iconos específicos de error */
+.error-403 .error-icon {
+    color: #f5576c;
+}
+
+.error-404 .error-icon {
+    color: #f39c12;
+}
+
+.error-500 .error-icon {
+    color: #e74c3c;
+}
+
+.btn-home,
+.btn-login {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-home:hover,
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+/* Estilos específicos para Error 403 */
+.error-403 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.error-403 .error-code {
+    color: #f5576c;
+}
+
+.error-403 .btn-login {
+    background: #f5576c;
+}
+
+.error-403 .btn-login:hover {
+    background: #e0455a;
+}
+
+/* Estilos específicos para Error 404 */
+.error-404 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.error-404 .error-code {
+    color: #667eea;
+}
+
+.error-404 .btn-home {
+    background: #667eea;
+}
+
+.error-404 .btn-home:hover {
+    background: #5568d3;
+}
+
+/* Estilos específicos para Error 500 */
+.error-500 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.error-500 .error-code {
+    color: #f5576c;
+}
+
+.error-500 .btn-home {
+    background: #f5576c;
+}
+
+.error-500 .btn-home:hover {
+    background: #e0455a;
+}
+
+/* Estilos específicos para Error General */
+.error-general {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.error-general .error-icon {
+    color: #fa709a;
+}
+
+.error-general .btn-home {
+    background: #fa709a;
+}
+
+.error-general .btn-home:hover {
+    background: #e85a8a;
+}
+

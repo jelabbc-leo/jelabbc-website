@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  
+  <!-- Dashboard - General -->
+  <data name="DashboardTitle" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DashboardWelcome" xml:space="preserve">
+    <value>Bienvenido, {0}</value>
+  </data>
+  
+  <!-- Dashboard - Métricas -->
+  <data name="MetricTicketsAbiertos" xml:space="preserve">
+    <value>Tickets Abiertos</value>
+  </data>
+  <data name="MetricTicketsCerrados" xml:space="preserve">
+    <value>Tickets Cerrados</value>
+  </data>
+  <data name="MetricTicketsEnProceso" xml:space="preserve">
+    <value>Tickets en Proceso</value>
+  </data>
+  <data name="MetricTicketsPendientes" xml:space="preserve">
+    <value>Tickets Pendientes</value>
+  </data>
+  <data name="MetricTicketsUrgentes" xml:space="preserve">
+    <value>Tickets Urgentes</value>
+  </data>
+  <data name="MetricTotalTickets" xml:space="preserve">
+    <value>Total de Tickets</value>
+  </data>
+  
+  <!-- Dashboard - Gráficas -->
+  <data name="ChartTicketsByStatus" xml:space="preserve">
+    <value>Tickets por Estado</value>
+  </data>
+  <data name="ChartTicketsByMonth" xml:space="preserve">
+    <value>Tickets por Mes</value>
+  </data>
+  
+  <!-- Dashboard - Roles -->
+  <data name="RoleAdmin" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="RoleTecnico" xml:space="preserve">
+    <value>Técnico</value>
+  </data>
+  <data name="RoleResidente" xml:space="preserve">
+    <value>Residente</value>
+  </data>
+  
+  <!-- Internacionalización -->
+  <data name="LanguageSelector" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="LanguageSpanish" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
+  
+  <!-- Mensajes comunes -->
+  <data name="Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="ErrorLoadingData" xml:space="preserve">
+    <value>Error al cargar los datos</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No hay datos disponibles</value>
+  </data>
+  
+  <!-- Tickets -->
+  <data name="Tickets_Title" xml:space="preserve">
+    <value>Gestión de Tickets</value>
+  </data>
+  <data name="Tickets_New" xml:space="preserve">
+    <value>Nuevo Ticket</value>
+  </data>
+  <data name="Tickets_Folio" xml:space="preserve">
+    <value>Folio</value>
+  </data>
+  <data name="Tickets_Title_Column" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="Tickets_Category" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="Tickets_Priority" xml:space="preserve">
+    <value>Prioridad</value>
+  </data>
+  <data name="Tickets_Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Tickets_CreatedDate" xml:space="preserve">
+    <value>Fecha Creación</value>
+  </data>
+  <data name="Tickets_Actions" xml:space="preserve">
+    <value>Acciones</value>
+  </data>
+  <data name="Tickets_Filter" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="Tickets_Clear" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="Tickets_Export" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="Tickets_Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Tickets_Attachments" xml:space="preserve">
+    <value>Adjuntos</value>
+  </data>
+  <data name="Tickets_Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Tickets_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Tickets_Assign" xml:space="preserve">
+    <value>Asignar Técnico</value>
+  </data>
+  <data name="Tickets_ChangeStatus" xml:space="preserve">
+    <value>Cambiar Estado</value>
+  </data>
+  <data name="Tickets_AddComment" xml:space="preserve">
+    <value>Agregar Comentario</value>
+  </data>
+  <data name="Tickets_Close" xml:space="preserve">
+    <value>Cerrar Ticket</value>
+  </data>
+  <data name="Tickets_Timeline" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="Tickets_Rating" xml:space="preserve">
+    <value>Calificación</value>
+  </data>
+</root>

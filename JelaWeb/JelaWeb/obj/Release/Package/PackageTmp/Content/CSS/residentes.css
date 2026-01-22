@@ -1,0 +1,276 @@
+/* ============================================================================
+   Módulo: Residentes
+   Archivo: residentes.css
+   ============================================================================ */
+
+/* Contenedor principal */
+.container-fluid {
+    padding: 15px;
+}
+
+/* Filtros */
+#formFiltros {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Grid */
+#gridResidentes {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Popup */
+.popup-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.popup-footer .dxb {
+    margin-left: 5px;
+}
+
+/* Tabs del popup */
+.dxpc-content {
+    padding: 15px;
+}
+
+/* Form layouts dentro del popup */
+.dxflFormLayout {
+    padding: 10px;
+}
+
+/* Grupos de campos */
+.dxflGroupCaption {
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Campos requeridos */
+.dxflRequiredMark {
+    color: #c00;
+    font-weight: bold;
+}
+
+/* Checkboxes */
+.dxeCheckBoxCell {
+    padding: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    
+    #formFiltros .dxflItem {
+        width: 100% !important;
+    }
+}
+
+/* Estados del residente en el grid */
+.residente-activo {
+    color: #28a745;
+}
+
+.residente-inactivo {
+    color: #dc3545;
+}
+
+/* Indicador de residente principal */
+.residente-principal {
+    font-weight: bold;
+}
+
+/* Iconos de Telegram */
+.telegram-activo {
+    color: #0088cc;
+}
+
+.telegram-inactivo {
+    color: #999;
+}
+
+/* ============================================================================
+   ESCANEO DE INE - Azure Document Intelligence
+   ============================================================================ */
+
+/* Contenedor principal del scanner */
+.ine-scanner-container {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Área de carga de imagen */
+.ine-upload-area {
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.ine-upload-area:hover {
+    border-color: #0056b3;
+    background-color: #e7f1ff;
+}
+
+.ine-upload-area.drag-over {
+    border-color: #28a745;
+    background-color: #d4edda;
+}
+
+.ine-upload-icon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.ine-upload-icon i {
+    display: block;
+}
+
+.ine-upload-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ine-upload-hint {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+/* Vista previa de imagen */
+.ine-preview-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.ine-preview-container img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ine-remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.ine-remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Botones de acción */
+.ine-actions {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.ine-actions .dxb {
+    margin: 0 5px;
+}
+
+/* Estado del escaneo */
+.ine-status {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+.ine-status:empty {
+    display: none;
+}
+
+.ine-status-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.ine-status-processing {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.ine-status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.ine-status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animación de procesamiento */
+.ine-status-processing::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #856404;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ine-spin 1s linear infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes ine-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ine-upload-area {
+        padding: 30px 15px;
+    }
+    
+    .ine-upload-icon {
+        font-size: 36px;
+    }
+    
+    .ine-upload-text {
+        font-size: 14px;
+    }
+}

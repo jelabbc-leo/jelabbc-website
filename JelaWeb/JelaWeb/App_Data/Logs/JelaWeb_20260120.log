@@ -1,0 +1,364 @@
+2026-01-20 20:49:27 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 20:49:28 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 20:49:39 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 20:49:39 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 20:49:39 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 20:49:39 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 20:49:39 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 20:49:39 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 20:49:39 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 20:49:39 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 20:49:39 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 20:49:39 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 20:49:39 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 20:49:39 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 20:49:39 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 20:49:39 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 20:49:39 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 20:49:39 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 20:49:41 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 20:49:43 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:49:43 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:49:46 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:49:46 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:50:00 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:50:00 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:50:00 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:50:01 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:52:07 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 20:52:07 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 20:52:12 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 20:52:12 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 20:52:12 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 20:52:12 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 20:52:13 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 20:52:13 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 20:52:13 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 20:52:13 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 20:52:13 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 20:52:13 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 20:52:13 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 20:52:13 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 20:52:13 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 20:52:13 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 20:52:13 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 20:52:13 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 20:52:14 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 20:52:17 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:52:17 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:52:19 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:52:19 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:53:14 [INFO] Sesión finalizada - UserId: 5 - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 20:53:14 [INFO] Aplicación JELA finalizada
+2026-01-20 20:54:14 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 20:54:14 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 20:54:21 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 20:54:21 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 20:54:21 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 20:54:21 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 20:54:21 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 20:54:21 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 20:54:22 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 20:54:22 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 20:54:22 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 20:54:22 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 20:54:22 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 20:54:22 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 20:54:22 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 20:54:22 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 20:54:22 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 20:54:22 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 20:54:23 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 20:54:26 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:54:26 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:54:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:54:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:54:30 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:54:30 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:54:30 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:54:30 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:55:00 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 20:55:00 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 20:55:01 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:55:01 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 20:58:31 [INFO] Sesión finalizada - UserId: 5 - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 20:58:31 [INFO] Aplicación JELA finalizada
+2026-01-20 21:01:15 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 21:01:16 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:01:21 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 21:01:21 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 21:01:21 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 21:01:21 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 21:01:21 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 21:01:21 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 21:01:21 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 21:01:21 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 21:01:21 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 21:01:21 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 21:01:21 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 21:01:21 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 21:01:21 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 21:01:21 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 21:01:21 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 21:01:21 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 21:01:23 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:01:25 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 21:01:25 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:01:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:01:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:01:29 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 21:01:29 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:01:29 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:01:30 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:04:53 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 21:04:54 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:04:55 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:04:55 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Inicio.aspx
+2026-01-20 21:04:55 [WARNING] [Usuario: ::1] Intento de acceso no autorizado a: /Views/Inicio.aspx
+2026-01-20 21:04:55 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:04:55 [INFO] Sesión finalizada - UserId: Desconocido - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:05:00 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 21:05:00 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 21:05:00 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 21:05:00 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 21:05:00 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 21:05:00 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 21:05:00 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 21:05:00 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 21:05:00 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 21:05:00 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 21:05:00 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 21:05:00 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 21:05:00 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 21:05:00 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 21:05:00 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 21:05:00 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 21:05:02 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:05:03 [INFO] Dropdown de entidades cargado con 1 entidades para administrador
+2026-01-20 21:05:03 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:05:06 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:05:06 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:13:46 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 21:13:47 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:13:54 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 21:13:54 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 21:13:54 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 21:13:54 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 21:13:54 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 21:13:54 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 21:13:54 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 21:13:54 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 21:13:54 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 21:13:54 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 21:13:54 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 21:13:54 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 21:13:54 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 21:13:54 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 21:13:54 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 21:13:54 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 21:13:59 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:14:02 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:02 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:04 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:04 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:14 [INFO] Usuario Administrador de Condominios cambió a entidad: CONDOMINIO RESIDENCIAL LAS LOMAS S.A. DE C.V. (ID: 3)
+2026-01-20 21:14:14 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:14 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:14 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:15 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:15 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:18 [INFO] Usuario Administrador de Condominios cambió a entidad: CONDOMINIO VILLAS DEL SOL S.C. (ID: 2)
+2026-01-20 21:14:18 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:18 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:18 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:18 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:18 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:28 [INFO] Usuario Administrador de Condominios cambió a entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:14:28 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:28 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:28 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:28 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:40 [INFO] Usuario Administrador de Condominios cambió a entidad: CONDOMINIO RESIDENCIAL LAS LOMAS S.A. DE C.V. (ID: 3)
+2026-01-20 21:14:40 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:40 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:40 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:41 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:41 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:51 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:51 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:52 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:52 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:52 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:53 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:53 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:55 [INFO] Usuario Administrador de Condominios seleccionó entidad: CONDOMINIO RESIDENCIAL LAS LOMAS S.A. DE C.V. (ID: 3)
+2026-01-20 21:14:55 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:14:55 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:14:55 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:14:55 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:15:00 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:15:00 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:15:00 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:15:01 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:16:33 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:16:33 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:16:34 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:16:34 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:16:34 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:27 [INFO] Aplicación JELA iniciada correctamente
+2026-01-20 21:22:28 [INFO] [Usuario: ::1] Nueva sesión iniciada - SessionID: xwv12cyfs0cwq25k3rrynhmw
+2026-01-20 21:22:32 [INFO] DEBUG btnLogin_Click - txtUsername.Text: 'jlsg.gdl@gmail.com' (Length: 18)
+2026-01-20 21:22:32 [INFO] DEBUG btnLogin_Click - txtPassword.Text: '***' (Length: 5)
+2026-01-20 21:22:32 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtUsername): False
+2026-01-20 21:22:32 [INFO] DEBUG btnLogin_Click - IsNullOrWhiteSpace(txtPassword): False
+2026-01-20 21:22:33 [INFO] AuthService.ObtenerOpcionesMenu - UserId: 5, Query: SELECT DISTINCT o.Id, o.Nombre, o.Url, o.Icono, o.RibbonTab, o.RibbonGroup, o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion FROM conf_opciones o INNER JOIN conf_rolopciones ro ON o.Id = ro.OpcionId INNER JOIN conf_usuarioroles ur ON ro.RolId = ur.RolId WHERE ur.UsuarioId = 5 AND o.Activo = 1 ORDER BY o.OrdenTab, o.OrdenGrupo, o.OrdenOpcion
+2026-01-20 21:22:33 [INFO] AuthService.ObtenerOpcionesMenu - URL: https://jela-api-ctb8a6ggbpdqbxhg.mexicocentral-01.azurewebsites.net/api/CRUD?strQuery=SELECT+DISTINCT+o.Id%2c+o.Nombre%2c+o.Url%2c+o.Icono%2c+o.RibbonTab%2c+o.RibbonGroup%2c+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion+FROM+conf_opciones+o+INNER+JOIN+conf_rolopciones+ro+ON+o.Id+%3d+ro.OpcionId+INNER+JOIN+conf_usuarioroles+ur+ON+ro.RolId+%3d+ur.RolId+WHERE+ur.UsuarioId+%3d+5+AND+o.Activo+%3d+1+ORDER+BY+o.OrdenTab%2c+o.OrdenGrupo%2c+o.OrdenOpcion
+2026-01-20 21:22:33 [INFO] AuthService.ObtenerOpcionesMenu - Datos retornados: 31
+2026-01-20 21:22:33 [INFO] AuthService.ObtenerOpcionesMenu - Opciones construidas: 31
+2026-01-20 21:22:33 [INFO] [Usuario: jlsg.gdl@gmail.com] Login exitoso para usuario: jlsg.gdl@gmail.com (ID: 5, Nombre: Administrador de Condominios, TipoUsuario: AdministradorCondominios)
+2026-01-20 21:22:33 [INFO] DEBUG Login - TipoUsuario recibido: 'AdministradorCondominios'
+2026-01-20 21:22:33 [INFO] DEBUG Login - Constante esperada: 'AdministradorCondominios'
+2026-01-20 21:22:33 [INFO] DEBUG Login - ¿Son iguales?: True
+2026-01-20 21:22:33 [INFO] DEBUG Login - Comparación case-insensitive: True
+2026-01-20 21:22:33 [INFO] DEBUG Login - Longitud TipoUsuario: 24
+2026-01-20 21:22:33 [INFO] DEBUG Login - Longitud Constante: 24
+2026-01-20 21:22:33 [INFO] Usuario jlsg.gdl@gmail.com es Administrador de Condominios, redirigiendo a selector de entidades
+2026-01-20 21:22:35 [INFO] Usuario Administrador de Condominios seleccionó entidad: JOSE LUIS SOLIS GOMEZ (ID: 1)
+2026-01-20 21:22:37 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:22:37 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:22:40 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:40 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:48 [INFO] Usuario Administrador de Condominios cambió a entidad: CONDOMINIO RESIDENCIAL LAS LOMAS S.A. DE C.V. (ID: 3)
+2026-01-20 21:22:48 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:22:48 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:22:48 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:22:48 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:48 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:56 [INFO] Usuario Administrador de Condominios cambió a entidad: CONDOMINIO VILLAS DEL SOL S.C. (ID: 2)
+2026-01-20 21:22:56 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:22:56 [INFO] Dropdown de entidades cargado con 3 entidades para administrador
+2026-01-20 21:22:56 [ERROR] Error al cargar scripts y estilos en Master Page: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Exception: HttpException
+Message: La colección de controles no puede modificarse porque el control contiene bloques de código (por ej. <% ... %>).
+Stack Trace:    en System.Web.UI.ControlCollection.Add(Control child)
+   en JelaWeb.Jela.LoadScriptsAndStyles() en D:\DesarrolloWEB\JelaAzure\JelaWeb\JelaWeb\MasterPages\Jela.Master.vb:línea 483
+2026-01-20 21:22:56 [WARNING] Email no encontrado para usuario 5, usando email por defecto
+2026-01-20 21:22:56 [WARNING] Email no encontrado para usuario 5, usando email por defecto
