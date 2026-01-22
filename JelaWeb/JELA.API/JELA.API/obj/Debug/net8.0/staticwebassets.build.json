@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"uHkepZNgzxrDSVf1UurzU8uOBk6ybW7dD9PbBjlkCPM=","Source":"JELA.API","BasePath":"_content/JELA.API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "VXtpp7D6wbe1ulF8eMvbULZoA1TxYKS1UXWTBD7/4oc=",
+  "Source": "JELA.API",
+  "BasePath": "_content/JELA.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

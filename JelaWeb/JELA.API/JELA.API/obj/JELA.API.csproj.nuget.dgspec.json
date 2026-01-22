@@ -1,34 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\JELA.API\\JELA.API.csproj": {}
+    "/workspaces/JELA/JelaWeb/JELA.API/JELA.API/JELA.API.csproj": {}
   },
   "projects": {
-    "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\JELA.API\\JELA.API.csproj": {
+    "/workspaces/JELA/JelaWeb/JELA.API/JELA.API/JELA.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\JELA.API\\JELA.API.csproj",
+        "projectUniqueName": "/workspaces/JELA/JelaWeb/JELA.API/JELA.API/JELA.API.csproj",
         "projectName": "JELA.API",
-        "projectPath": "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\JELA.API\\JELA.API.csproj",
-        "packagesPath": "C:\\Users\\jlsgg\\.nuget\\packages\\",
-        "outputPath": "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\JELA.API\\obj\\",
+        "projectPath": "/workspaces/JELA/JelaWeb/JELA.API/JELA.API/JELA.API.csproj",
+        "packagesPath": "/home/vscode/.nuget/packages/",
+        "outputPath": "/workspaces/JELA/JelaWeb/JELA.API/JELA.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\DesarrolloWEB\\JelaAzure\\JelaWeb\\JELA.API\\NuGet.Config",
-          "C:\\Users\\jlsgg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for DOCX Editor SDK.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for PDF Viewer SDK.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for Spreadsheet Editor SDK.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/workspaces/JELA/JelaWeb/JELA.API/nuget.config",
+          "/home/vscode/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,8 +38,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -109,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
