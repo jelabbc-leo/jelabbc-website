@@ -18,6 +18,17 @@ public class AllowedTablesSettings
     };
 
     /// <summary>
+    /// Lista de tablas específicas permitidas (sin prefijo)
+    /// Para el módulo de tracking/IA que necesita escribir en estas tablas
+    /// </summary>
+    public List<string> AllowedTables { get; set; } = new()
+    {
+        "unidades_viajes",
+        "contactos_viaje",
+        "eventos_unidad"
+    };
+
+    /// <summary>
     /// Lista de tablas específicas bloqueadas
     /// </summary>
     public List<string> BlockedTables { get; set; } = new()
@@ -36,6 +47,10 @@ public class AllowedTablesSettings
         // Verificar si está bloqueada
         if (BlockedTables.Any(t => t.Equals(lowerTable, StringComparison.OrdinalIgnoreCase)))
             return false;
+
+        // Verificar si está en la lista de tablas permitidas explícitamente
+        if (AllowedTables.Any(t => t.Equals(lowerTable, StringComparison.OrdinalIgnoreCase)))
+            return true;
 
         // Verificar si tiene un prefijo permitido
         return AllowedPrefixes.Any(p => lowerTable.StartsWith(p.ToLower()));

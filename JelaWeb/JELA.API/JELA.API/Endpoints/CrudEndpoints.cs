@@ -181,9 +181,11 @@ public static class CrudEndpoints
             }
 
             // Convertir campos a diccionario simple
+            // Usar GetValorNativo() para convertir JsonElement a tipos primitivos
+            // (MySqlConnector no acepta System.Text.Json.JsonElement como parámetro)
             var campos = request.Campos.ToDictionary(
                 kvp => kvp.Key,
-                kvp => kvp.Value.Valor ?? DBNull.Value
+                kvp => kvp.Value.GetValorNativo() ?? DBNull.Value
             );
 
             // Insertar y obtener ID
@@ -231,10 +233,10 @@ public static class CrudEndpoints
                 return Results.BadRequest(new ErrorResponse { Mensaje = "Se requieren campos para actualizar" });
             }
 
-            // Convertir campos
+            // Convertir campos (con conversión de JsonElement a primitivos)
             var campos = request.Campos.ToDictionary(
                 kvp => kvp.Key,
-                kvp => kvp.Value.Valor ?? DBNull.Value
+                kvp => kvp.Value.GetValorNativo() ?? DBNull.Value
             );
 
             // Actualizar
