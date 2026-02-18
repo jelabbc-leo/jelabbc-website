@@ -585,9 +585,10 @@ public static class WebhookEndpoints
         var queryBuscar = $"SELECT id FROM log_monitoreo_sesiones WHERE vapi_call_id = '{request.CallId}' LIMIT 1";
         var resultado = await db.EjecutarConsultaAsync(queryBuscar);
 
-        if (resultado == null || resultado.Rows.Count == 0) return;
+        var primerRegistro = resultado?.FirstOrDefault();
+        if (primerRegistro == null) return;
 
-        var sesionId = Convert.ToInt32(resultado.Rows[0]["id"]);
+        var sesionId = Convert.ToInt32(primerRegistro["id"]);
 
         var estado = request.Status == "completed" || request.DurationSeconds > 10
             ? "completada" : "fallida";
@@ -597,17 +598,20 @@ public static class WebhookEndpoints
             ? transcripcion.Substring(0, 200) + "..."
             : transcripcion;
 
+        var metadataJson = JsonSerializer.Serialize(new { request.Status, request.DisconnectReason })
+            .Replace("'", "''");
+
         var queryUpdate = $@"UPDATE log_monitoreo_sesiones SET 
             estado = '{estado}',
             transcripcion_completa = '{transcripcion}',
             resumen = '{resumen}',
             duracion_segundos = {request.DurationSeconds},
             fin_llamada = NOW(),
-            metadata = '{JsonSerializer.Serialize(new { request.Status, request.DisconnectReason }).Replace("'", "''")}',
+            metadata = '{metadataJson}',
             actualizado_en = NOW()
             WHERE id = {sesionId}";
 
-        await db.EjecutarComandoAsync(queryUpdate);
+        await db.EjecutarNoConsultaAsync(queryUpdate);
 
         logger.LogInformation(
             "Sesion de monitoreo #{SesionId} actualizada a '{Estado}' para CallId: {CallId}",
