@@ -145,6 +145,20 @@ public static class WebhookEndpoints
             await RegistrarInteraccion(db, ticketId, "VAPI", "LlamadaRecibida",
                 request.CallId, request, request.DurationSeconds, true, null, 1);
 
+            // Fase 6: Si esta llamada proviene del sistema de monitoreo,
+            // actualizar log_monitoreo_sesiones con la transcripcion y resultado.
+            // Identificamos llamadas de monitoreo por el vapi_call_id en la tabla.
+            try
+            {
+                await ActualizarSesionMonitoreo(db, request, logger);
+            }
+            catch (Exception monEx)
+            {
+                logger.LogWarning(monEx,
+                    "No se pudo actualizar sesion de monitoreo para CallId: {CallId} (no critico)",
+                    request.CallId);
+            }
+
             return Results.Ok(new WebhookResponse
             {
                 Success = true,
@@ -556,6 +570,49 @@ public static class WebhookEndpoints
     #endregion
 
     #region Métodos Auxiliares
+
+    /// <summary>
+    /// Actualiza log_monitoreo_sesiones si el CallId corresponde a una sesion de monitoreo.
+    /// Busca por vapi_call_id; si no existe, ignora silenciosamente (no es de monitoreo).
+    /// </summary>
+    private static async Task ActualizarSesionMonitoreo(
+        IDatabaseService db,
+        VapiWebhookRequest request,
+        ILogger<Program> logger)
+    {
+        if (string.IsNullOrEmpty(request.CallId)) return;
+
+        var queryBuscar = $"SELECT id FROM log_monitoreo_sesiones WHERE vapi_call_id = '{request.CallId}' LIMIT 1";
+        var resultado = await db.EjecutarConsultaAsync(queryBuscar);
+
+        if (resultado == null || resultado.Rows.Count == 0) return;
+
+        var sesionId = Convert.ToInt32(resultado.Rows[0]["id"]);
+
+        var estado = request.Status == "completed" || request.DurationSeconds > 10
+            ? "completada" : "fallida";
+
+        var transcripcion = request.Transcription?.Replace("'", "''") ?? "";
+        var resumen = transcripcion.Length > 200
+            ? transcripcion.Substring(0, 200) + "..."
+            : transcripcion;
+
+        var queryUpdate = $@"UPDATE log_monitoreo_sesiones SET 
+            estado = '{estado}',
+            transcripcion_completa = '{transcripcion}',
+            resumen = '{resumen}',
+            duracion_segundos = {request.DurationSeconds},
+            fin_llamada = NOW(),
+            metadata = '{JsonSerializer.Serialize(new { request.Status, request.DisconnectReason }).Replace("'", "''")}',
+            actualizado_en = NOW()
+            WHERE id = {sesionId}";
+
+        await db.EjecutarComandoAsync(queryUpdate);
+
+        logger.LogInformation(
+            "Sesion de monitoreo #{SesionId} actualizada a '{Estado}' para CallId: {CallId}",
+            sesionId, estado, request.CallId);
+    }
 
     /// <summary>
     /// Crea un ticket para llamada de VAPI
