@@ -2,7 +2,7 @@
 
 ## Introducción
 
-El Panel Admin JELA es un sistema de gestión de licencias y administradores para la plataforma multi-tenant de gestión de condominios JELA. Actualmente, JelaWeb permite a los administradores gestionar múltiples condominios sin ningún control de licencias ni proceso automatizado de alta. Este sistema proporcionará a los super-administradores de JELA herramientas para gestionar cuentas de administradores de condominios, controlar la asignación de licencias, automatizar la configuración de entidades y monitorear el uso del sistema.
+El Panel Admin JELA es un sistema de gestión de licencias y administradores para la plataforma multi-tenant de jela-api-logistica JELA. Actualmente, JelaWeb permite a los administradores gestionar múltiples condominios sin ningún control de licencias ni proceso automatizado de alta. Este sistema proporcionará a los super-administradores de JELA herramientas para gestionar cuentas de administradores de condominios, controlar la asignación de licencias, automatizar la configuración de entidades y monitorear el uso del sistema.
 
 El sistema se construirá como una aplicación ASP.NET WebForms separada (VB.NET Framework 4.8) que se integra con la JELA.API existente (.NET 8 C#) y comparte la base de datos MySQL `jela_qa` con JelaWeb.
 
