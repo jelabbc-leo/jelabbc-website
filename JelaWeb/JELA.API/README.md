@@ -1,6 +1,6 @@
 # JELA.API
 
-API dinámica para el sistema JELA - Gestión de Condominios.
+API dinámica para el sistema JELA - jela-api-logistica.
 
 ## Tecnologías
 
