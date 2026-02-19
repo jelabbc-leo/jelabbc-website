@@ -156,7 +156,7 @@ try
         {
             Title = "JELA API",
             Version = "v1",
-            Description = "API dinámica para el sistema JELA - Gestión de Condominios",
+            Description = "API dinámica para el sistema JELA - jela-api-logistica",
             Contact = new OpenApiContact
             {
                 Name = "JELA BBC",
