@@ -2,14 +2,14 @@
 
 **Fecha:** Enero 21, 2026  
 **Versión:** 1.0  
-**Proyecto:** JELA.API - API Backend para Sistema de Gestión de Condominios  
+**Proyecto:** JELA.API - API Backend para Sistema de jela-api-logistica  
 **Framework:** .NET 8 Minimal APIs  
 
 ---
 
 ## 🎯 VISIÓN GENERAL
 
-JELA.API es una API REST moderna construida con .NET 8 Minimal APIs que proporciona servicios backend para el sistema de gestión de condominios JELA. Implementa un enfoque **100% dinámico** para operaciones CRUD, autenticación JWT, integración con IA (Azure OpenAI), y procesamiento de documentos.
+JELA.API es una API REST moderna construida con .NET 8 Minimal APIs que proporciona servicios backend para el sistema de jela-api-logistica JELA. Implementa un enfoque **100% dinámico** para operaciones CRUD, autenticación JWT, integración con IA (Azure OpenAI), y procesamiento de documentos.
 
 ### Arquitectura Principal
 - **Minimal APIs** con .NET 8
